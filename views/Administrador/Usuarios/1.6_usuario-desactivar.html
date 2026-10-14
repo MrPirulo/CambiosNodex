@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css-admin/css-user/usuario-eliminar.css">
-    <title>Eliminar Usuario</title>
+    <title>Desactivar Usuario</title>
 </head>
 <body>
 
@@ -13,19 +13,18 @@
     <p>Panel del Administrador &mdash; Gestión de usuarios</p>
     <nav>
         <a href="../admin-dashboard.html">Panel principal</a> |
-        <a href="usuarios-listado.html">Usuarios</a> |
-        <a href="../admin-grafica.html">Gráfica</a> |
-        <a href="../reporte.html">Reporte PDF</a> |
-        <a href="../../../index.html">Cerrar sesión</a>
+        <a href="1.3_usuarios-listado.html">Usuarios</a> |
+        <a href="../1.7_admin-Bitacora.html">Bitácora</a> |
+        <a href="../../../auth/login.html">Cerrar sesión</a>
     </nav>
 </header>
 
 <hr>
 
 <main>
-    <h2>Eliminar usuario <small>(RF-1.5)</small></h2>
+    <h2>Desactivar usuario <small>(RF-1.6)</small></h2>
 
-    <p>&#9888; Estás a punto de eliminar al siguiente usuario del sistema:</p>
+    <p>&#9888; Estás a punto de desactivar (baja lógica) al siguiente usuario del sistema. Su historial se conservará:</p>
 
     <table border="1" cellpadding="6" cellspacing="0">
         <tbody>
@@ -43,23 +42,22 @@
             </tr>
             <tr>
                 <th align="left">Estado actual</th>
-                <td>Inactivo</td>
+                <td>Activo</td>
             </tr>
         </tbody>
     </table>
 
-    <p>Esta acción no se puede deshacer. ¿Deseas continuar?</p>
+    <p>¿Deseas continuar y dar de baja el acceso?</p>
 
-    <form action="usuarios-listado.html" method="get">
+    <form action="1.3_usuarios-listado.html" method="get">
         <input type="hidden" name="eliminado" value="006">
-        <button type="submit">Confirmar eliminación</button> <small>(RF-1.5)</small>
+        <button type="submit">Confirmar desactivación</button> <small>(RF-1.6)</small>
     </form>
 
-    <p><a href="usuarios-listado.html" class="btn-cancel">Cancelar y regresar al listado</a></p>
+    <p><a href="1.3_usuarios-listado.html" class="btn-cancel">Cancelar y regresar al listado</a></p>
 </main>
 
 <hr>
-
 <footer>
     <p>Prototipo 1 &mdash; AEB-1055 Programación Web</p>
 </footer>

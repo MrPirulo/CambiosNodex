@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css-admin/css-user/usuario-Alta-Edicion.css">
+    <title>Alta de Usuario</title>
+</head>
+<body>
+
+<header>
+    <img src="../../../public/img/logo.png" alt="Logotipo del Sistema Nodex" width="200">
+    <h1>NODEX</h1>
+    <p>Panel del Administrador &mdash; Gestión de usuarios</p>
+    <nav>
+        <a href="../admin-dashboard.html">Panel principal</a> |
+        <a href="1.3_usuarios-listado.html">Usuarios</a> |
+        <a href="../1.7_admin-Bitacora.html">Bitácora</a> |
+        <a href="../../../auth/login.html">Cerrar sesión</a>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+    <h2>Alta de usuario <small>(RF-1.2)</small></h2>
+    <p>Completa el siguiente formulario para dar de alta un nuevo usuario. Al guardar, el sistema regresará al listado de usuarios.</p>
+
+    <form action="1.3_usuarios-listado.html" method="get">
+        <fieldset>
+            <legend>Datos generales</legend>
+            <p>
+                <label for="nombre">Nombre completo:</label><br>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre y apellidos" required>
+            </p>
+            <p>
+                <label for="correo">Correo electrónico:</label><br>
+                <input type="email" id="correo" name="correo" placeholder="usuario@tecnm.edu.mx" required>
+            </p>
+            <p>
+                <label for="password">Contraseña cifrada:</label><br>
+                <input type="password" id="password" name="password" required>
+            </p>
+            <p>
+                <label for="telefono">Teléfono:</label><br>
+                <input type="tel" id="telefono" name="telefono" placeholder="993-000-0000">
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Rol y estado</legend>
+            <p>
+                <label for="rol">Rol del usuario:</label><br>
+                <select id="rol" name="rol" required>
+                    <option value="">-- Selecciona un rol --</option>
+                    <option value="administrador">Administrador</option>
+                    <option value="proyectista">Ing. Proyectista</option>
+                    <option value="gerente">Gerente de proyectos</option>
+                    <option value="logistica">Supervisor de Logística</option>
+                    <option value="usuario">Usuario</option>
+                </select>
+            </p>
+        </fieldset>
+
+        <p>
+            <button type="submit">Guardar usuario</button> <small>(RF-1.2)</small>
+            <button type="reset">Limpiar formulario</button>
+        </p>
+    </form>
+
+    <p><a href="1.3_usuarios-listado.html"> Cancelar y regresar al listado</a></p>
+</main>
+
+<hr>
+<footer>
+    <p>Prototipo 1 &mdash; AEB-1055 Programación Web</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css-admin/css-user/usuario-Alta-Edicion.css">
+    <title>Edición de Usuario</title>
+</head>
+<body>
+
+<header>
+    <img src="../../../public/img/logo.png" alt="Logotipo del Sistema Nodex" width="200">
+    <h1>NODEX</h1>
+    <p>Panel del Administrador &mdash; Gestión de usuarios</p>
+    <nav>
+        <a href="../admin-dashboard.html">Panel principal</a> |
+        <a href="1.3_usuarios-listado.html">Usuarios</a> |
+        <a href="../1.7_admin-Bitacora.html">Bitácora</a> |
+        <a href="../../../auth/login.html">Cerrar sesión</a>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+    <h2>Edición de usuario <small>(RF-1.4)</small></h2>
+    <p>Actualiza los datos, la contraseña o el rol del usuario existente.</p>
+
+    <form action="1.3_usuarios-listado.html" method="get">
+        <fieldset>
+            <legend>Datos generales</legend>
+            <p>
+                <label for="id">ID de usuario:</label><br>
+                <input type="text" id="id" name="id" value="001" readonly>
+            </p>
+            <p>
+                <label for="nombre">Nombre completo:</label><br>
+                <input type="text" id="nombre" name="nombre" value="Jesus Andres Dionicio Garcia" required>
+            </p>
+            <p>
+                <label for="correo">Correo electrónico:</label><br>
+                <input type="email" id="correo" name="correo" value="jromerocastro@tecnm.edu.mx" required>
+            </p>
+            <p>
+                <label for="password">Nueva contraseña (opcional):</label><br>
+                <input type="password" id="password" name="password">
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Rol y estado</legend>
+            <p>
+                <label for="rol">Rol del usuario:</label><br>
+                <select id="rol" name="rol" required>
+                    <option value="administrador" selected>Administrador</option>
+                    <option value="proyectista">Ing. Proyectista</option>
+                    <option value="gerente">Gerente de proyectos</option>
+                    <option value="logistica">Supervisor de Logística</option>
+                    <option value="usuario">Usuario</option>
+                </select>
+            </p>
+        </fieldset>
+
+        <p>
+            <button type="submit">Actualizar usuario</button> <small>(RF-1.4)</small>
+        </p>
+    </form>
+
+    <p><a href="1.3_usuarios-listado.html"> Cancelar y regresar al listado</a></p>
+</main>
+
+<hr>
+<footer>
+    <p>Prototipo 1 &mdash; AEB-1055 Programación Web</p>
+</footer>
+
+</body>
+</html>

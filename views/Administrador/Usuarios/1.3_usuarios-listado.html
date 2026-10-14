@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css-admin/css-user/usuarios-listados.css">
+    <title>Listado de Usuarios</title>
+</head>
+<body>
+
+<header>
+    <img src="../../../public/img/logo.png" alt="Logotipo del Sistema Nodex" width="200">
+    <h1>NODEX</h1>
+    <p>Panel del Administrador &mdash; Gestión de usuarios</p>
+    <nav>
+        <a href="../admin-dashboard.html">Panel principal</a> |
+        <a href="1.3_usuarios-listado.html">Usuarios</a> |
+        <a href="../1.7_admin-Bitacora.html">Bitácora</a> |
+        <a href="../../../auth/login.html">Cerrar sesión</a>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+    <h2>Listado de usuarios <small>(RF-1.3)</small></h2>
+    <p>
+        A continuación se muestra el listado de usuarios activos e inactivos.
+    </p>
+
+    <p>
+        <a href="1.2_usuario-alta.html">Nuevo usuario</a> <small>(RF-1.2)</small>
+    </p>
+
+    <table border="1" cellpadding="6" cellspacing="0">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre completo</th>
+                <th>Correo electrónico</th>
+                <th>Rol</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>Jesus Andres Dionicio Garcia</td>
+                <td>jromerocastro@tecnm.edu.mx</td>
+                <td>Administrador</td>
+                <td>Activo</td>
+                <td>
+                    <a href="1.5_usuario-detalle.html?id=001">&#128269; Ver</a> <small>(RF-1.5)</small> |
+                    <a href="1.4_usuario-edicion.html?id=001">&#9998; Editar</a> <small>(RF-1.4)</small> |
+                    <a href="1.6_usuario-desactivar.html?id=001">&#128465; Eliminar</a> <small>(RF-1.6)</small>
+                </td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Ana Josefina Camacho Torres</td>
+                <td>acamacho@tecnm.edu.mx</td>
+                <td>Ing. Proyectista</td>
+                <td>Activo</td>
+                <td>
+                    <a href="1.5_usuario-detalle.html?id=002">&#128269; Ver</a> <small>(RF-1.5)</small> |
+                    <a href="1.4_usuario-edicion.html?id=002">&#9998; Editar</a> <small>(RF-1.4)</small> |
+                    <a href="1.6_usuario-desactivar.html?id=002">&#128465; Eliminar</a> <small>(RF-1.6)</small>
+                </td>
+            </tr>
+            <tr>
+                <td>006</td>
+                <td>Carlos Eduardo Domínguez Hernández</td>
+                <td>cdominguez@alumno.tecnm.mx</td>
+                <td>Usuario</td>
+                <td>Inactivo</td>
+                <td>
+                    <a href="1.5_usuario-detalle.html?id=006">&#128269; Ver</a> <small>(RF-1.5)</small> |
+                    <a href="1.4_usuario-edicion.html?id=006">&#9998; Editar</a> <small>(RF-1.4)</small> |
+                    <a href="1.6_usuario-desactivar.html?id=006">&#128465; Eliminar</a> <small>(RF-1.6)</small>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><a href="../admin-dashboard.html">&larr; Regresar al panel principal</a></p>
+</main>
+
+<hr>
+<footer>
+    <p>Prototipo 1 &mdash; AEB-1055 Programación Web</p>
+</footer>
+
+</body>
+</html>
