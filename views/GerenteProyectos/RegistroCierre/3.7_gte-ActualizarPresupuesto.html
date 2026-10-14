@@ -11,25 +11,36 @@
     <h1>Nodex - Plataforma Logística</h1>
     <p>Actualización de Presupuesto (Gerente de Proyectos)</p>
     <nav>
-        <a href="3_gte-dashboard.html">Panel principal</a> |
-        <a href="3.6_gte-consultarCierre.html">Consultar Cierres</a> |
+        <a href="../3_gte-dashboard.html"           >Panel principal       </a> |
+        <a href="3.6_gte-consultarCierre.html"      >Transacciones         </a> |
         <a href="3.7_gte-ActualizarPresupuesto.html">Actualizar Presupuesto</a> |
-        <a href="../auth/login.html">Cerrar sesión</a>
+        <a href="../../../auth/1.1_login.html"      >Cerrar sesión         </a>
     </nav>
 </header>
 
 <hr>
 
 <main>
-    <h2>Actualizar Observaciones en Cierre de Presupuesto <small>(RF-3.7)</small></h2>
+    <h2>Actualizar Observaciones y Datos en Cierre de Presupuesto <small>(RF-3.7)</small></h2>
     <form action="#" method="POST">
-        <p><strong>ID Cierre:</strong> CIER-102 (Centro de Datos A1)</p>
+        <p>
+            <label for="id_cierre">ID de Cierre:</label><br>
+            <input type="text" id="id_cierre" name="id_cierre" value="CIER-102" readonly style="background-color: #e9ecef;">
+        </p>
+        <p>
+            <label for="area_info">Área / Habitación Asociada:</label><br>
+            <input type="text" id="area_info" name="area_info" value="Torre Corporativa Alfa - Centro de Datos A1" readonly style="background-color: #e9ecef; width: 350px;">
+        </p>
+        <p>
+            <label for="nuevo_costo">Actualizar Costo Total Consolidado (MXN):</label><br>
+            <input type="text" id="nuevo_costo" name="nuevo_costo" value="$57,200.00" required>
+        </p>
         <p>
             <label for="nuevas_observaciones">Nuevas Observaciones o Notas de Auditoría:</label><br>
             <textarea id="nuevas_observaciones" name="nuevas_observaciones" rows="4" cols="50" required>Se ajustan los costos debido a recertificación de nodos adicionales solicitados por el cliente.</textarea>
         </p>
         <p>
-            <button type="submit">Guardar Observaciones</button>
+            <button type="submit">Guardar Cambios y Observaciones</button>
             <a href="3.6_gte-consultarCierre.html"><button type="button">Cancelar</button></a>
         </p>
     </form>

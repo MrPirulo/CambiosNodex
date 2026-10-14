@@ -11,11 +11,11 @@
     <h1>Nodex - Plataforma Logística</h1>
     <p>Registro de Área Arquitectónica (Gerente de Proyectos)</p>
     <nav>
-        <a href="3_gte-dashboard.html">Panel principal</a> |
+        <a href="../3_gte-dashboard.html">Panel principal</a> |
         <a href="3.1_gte-registrarArea.html">Registrar Área</a> |
-        <a href="3.2_gte-catalogo.html">Catálogo</a> |
-        <a href="3.6_gte-consultarCierre.html">Consultar Cierres</a> |
-        <a href="../auth/login.html">Cerrar sesión</a>
+        <a href="3.2_gte-catalago.html">Catálogo</a> |
+        <a href="../RegistroCierre/3.6_gte-consultarCierre.html">Consultar Cierres</a> |
+        <a href="../../../auth/1.1_login.html">Cerrar sesión</a>
     </nav>
 </header>
 
@@ -24,6 +24,13 @@
 <main>
     <h2>Registrar Nueva Área Arquitectónica <small>(RF-3.1)</small></h2>
     <form action="#" method="POST" enctype="multipart/form-data">
+        <p>
+            <label for="proyecto_nombre">Nombre del Proyecto:</label><br>
+            <select id="proyecto_nombre" name="proyecto_nombre">
+                <option>Torre Corporativa Alfa</option>
+                <option>Laboratorio de Redes  </option>
+            </select>
+        </p>
         <p>
             <label for="nombre_area">Nombre del Área / Habitación:</label><br>
             <input type="text" id="nombre_area" name="nombre_area" required placeholder="Ej. Sala de Servidores Piso 2">
@@ -38,14 +45,14 @@
         </p>
         <p>
             <button type="submit">Guardar Área Arquitectónica</button>
-            <a href="3.2_gte-catalogo.html"><button type="button">Ver Catálogo</button></a>
+            <button type="submit" formaction="3.2_gte-catalago.html">Ver Catálogo</button></a>
         </p>
     </form>
 </main>
 
 <hr>
 <footer>
-    <p><a href="3_gte-dashboard.html">&larr; Volver al Panel Principal</a></p>
+    <p><a href="../3_gte-dashboard.html">&larr; Volver al Panel Principal</a></p>
     <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>
 </footer>
 

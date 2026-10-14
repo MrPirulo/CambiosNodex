@@ -11,10 +11,10 @@
     <h1>Nodex - Plataforma Logística</h1>
     <p>Consulta de Cierres (Gerente de Proyectos)</p>
     <nav>
-        <a href="3_gte-dashboard.html">Panel principal</a> |
-        <a href="3.5_gte-registrarCierre.html">Registrar Cierre</a> |
-        <a href="3.6_gte-consultarCierre.html">Consultar Cierres</a> |
-        <a href="../auth/login.html">Cerrar sesión</a>
+        <a href="../3_gte-dashboard.html"     >Panel principal  </a> |
+        <a href="3.5_gte-registrarCierre.html">Registrar Cierre </a> |
+        <a href="3.6_gte-consultarCierre.html">Transacciones    </a> |
+        <a href="../../../auth/1.1_login.html">Cerrar sesión    </a>
     </nav>
 </header>
 
@@ -29,9 +29,12 @@
             <thead>
                 <tr>
                     <th>ID Cierre</th>
-                    <th>Área / Habitación</th>
-                    <th>Costo Consolidado</th>
+                    <th>Proyecto / Área</th>
+                    <th>Costo Materiales</th>
+                    <th>Mano de Obra</th>
+                    <th>Costo Total</th>
                     <th>Estado</th>
+                    <th>Responsable</th>
                     <th>Observaciones</th>
                     <th>Gestión</th>
                 </tr>
@@ -39,13 +42,29 @@
             <tbody>
                 <tr>
                     <td>CIER-102</td>
-                    <td>Centro de Datos A1</td>
-                    <td>$45,200.00 MXN</td>
+                    <td>Torre Corporativa Alfa - Centro de Datos A1</td>
+                    <td>$45,200.00</td>
+                    <td>$12,000.00</td>
+                    <td>$57,200.00 MXN</td>
                     <td>Congelado / Cerrado</td>
+                    <td>Ricardo Avalos</td>
                     <td>Validado sin desviaciones mayores.</td>
                     <td>
                         <a href="3.7_gte-ActualizarPresupuesto.html">Editar Obs.</a> | 
                         <a href="3.8_gte-eliminarPresupuesto.html">Invalidar</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CIER-101</td>
+                    <td>Laboratorio de Redes - Sala B2</td>
+                    <td>$28,500.00</td>
+                    <td>$8,000.00</td>
+                    <td>$36,500.00 MXN</td>
+                    <td>Invalidado (Baja lógica)</td>
+                    <td>Ricardo Avalos</td>
+                    <td>Cancelado por cambio de planos.</td>
+                    <td>
+                        <a href="3.7_gte-ActualizarPresupuesto.html">Ver Detalle</a>
                     </td>
                 </tr>
             </tbody>
@@ -55,7 +74,7 @@
 
 <hr>
 <footer>
-    <p><a href="3_gte-dashboard.html">&larr; Volver al Panel Principal</a></p>
+    <p><a href="../3_gte-dashboard.html">&larr; Volver al Panel Principal</a></p>
     <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>
 </footer>
 
