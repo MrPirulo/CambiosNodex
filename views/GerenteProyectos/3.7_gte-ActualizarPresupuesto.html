@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Actualizar Presupuesto - Nodex (Gerente)</title>
+    <link rel="stylesheet" href="css-gteproyectos/gte-dashboard.css">
+</head>
+<body>
+
+<header>
+    <h1>Nodex - Plataforma Logística</h1>
+    <p>Actualización de Presupuesto (Gerente de Proyectos)</p>
+    <nav>
+        <a href="3_gte-dashboard.html">Panel principal</a> |
+        <a href="3.6_gte-consultarCierre.html">Consultar Cierres</a> |
+        <a href="../auth/login.html">Cerrar sesión</a>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+    <h2>Actualizar Observaciones en Cierre de Presupuesto <small>(RF-3.7)</small></h2>
+    <form action="#" method="POST">
+        <p><strong>ID Cierre:</strong> CIER-102 (Centro de Datos A1)</p>
+        <p>
+            <label for="nuevas_observaciones">Nuevas Observaciones o Notas de Auditoría:</label><br>
+            <textarea id="nuevas_observaciones" name="nuevas_observaciones" rows="4" cols="50" required>Se ajustan los costos debido a recertificación de nodos adicionales solicitados por el cliente.</textarea>
+        </p>
+        <p>
+            <button type="submit">Guardar Observaciones</button>
+            <a href="3.6_gte-consultarCierre.html"><button type="button">Cancelar</button></a>
+        </p>
+    </form>
+</main>
+
+<hr>
+<footer>
+    <p><a href="3.6_gte-consultarCierre.html">&larr; Volver a Consultas</a></p>
+    <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>
+</footer>
+
+</body>
+</html>

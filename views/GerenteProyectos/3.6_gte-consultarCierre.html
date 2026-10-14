@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Consultar Cierres - Nodex (Gerente)</title>
+    <link rel="stylesheet" href="css-gteproyectos/gte-dashboard.css">
+</head>
+<body>
+
+<header>
+    <h1>Nodex - Plataforma Logística</h1>
+    <p>Consulta de Cierres (Gerente de Proyectos)</p>
+    <nav>
+        <a href="3_gte-dashboard.html">Panel principal</a> |
+        <a href="3.5_gte-registrarCierre.html">Registrar Cierre</a> |
+        <a href="../auth/login.html">Cerrar sesión</a>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+    <h2>Transacciones de Cierres de Presupuestos <small>(RF-3.6)</small></h2>
+    <p><a href="3.5_gte-registrarCierre.html">+ Registrar Nuevo Cierre de Presupuesto</a></p>
+    
+    <section>
+        <table border="1" cellpadding="6" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>ID Cierre</th>
+                    <th>Área / Habitación</th>
+                    <th>Costo Consolidado</th>
+                    <th>Estado</th>
+                    <th>Observaciones</th>
+                    <th>Gestión</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>CIER-102</td>
+                    <td>Centro de Datos A1</td>
+                    <td>$45,200.00 MXN</td>
+                    <td>Congelado / Cerrado</td>
+                    <td>Validado sin desviaciones mayores.</td>
+                    <td>
+                        <a href="3.7_gte-ActualizarPresupuesto.html">Editar Obs.</a> | 
+                        <a href="3.8_gte-eliminarPresupuesto.html">Invalidar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+
+<hr>
+<footer>
+    <p><a href="3_gte-dashboard.html">&larr; Volver al Panel Principal</a></p>
+    <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>
+</footer>
+
+</body>
+</html>

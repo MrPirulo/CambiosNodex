@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Actualizar Croquis - Nodex (Gerente)</title>
+    <link rel="stylesheet" href="css-gteproyectos/gte-dashboard.css">
+</head>
+<body>
+
+<header>
+    <h1>Nodex - Plataforma Logística</h1>
+    <p>Actualización de Área (Gerente de Proyectos)</p>
+    <nav>
+        <a href="3_gte-dashboard.html">Panel principal</a> |
+        <a href="3.2_gte-catalogo.html">Catálogo</a> |
+        <a href="../auth/login.html">Cerrar sesión</a>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+    <h2>Actualizar Nombre, Medidas o Croquis <small>(RF-3.3)</small></h2>
+    <form action="#" method="POST" enctype="multipart/form-data">
+        <p>
+            <label for="nombre_area">Nombre del Área:</label><br>
+            <input type="text" id="nombre_area" name="nombre_area" value="Centro de Datos A1" required>
+        </p>
+        <p>
+            <label for="medidas">Medidas:</label><br>
+            <input type="text" id="medidas" name="medidas" value="12x8 metros" required>
+        </p>
+        <p>
+            <label for="croquis">Actualizar Archivo de Croquis:</label><br>
+            <input type="file" id="croquis" name="croquis">
+        </p>
+        <p>
+            <button type="submit">Guardar Cambios</button>
+            <a href="3.2_gte-catalogo.html"><button type="button">Cancelar</button></a>
+        </p>
+    </form>
+</main>
+
+<hr>
+<footer>
+    <p><a href="3.2_gte-catalogo.html">&larr; Volver al Catálogo</a></p>
+    <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>
+</footer>
+
+</body>
+</html>

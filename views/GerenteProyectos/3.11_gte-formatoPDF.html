@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formato PDF - Nodex (Gerente)</title>
+    <link rel="stylesheet" href="css-gteproyectos/gte-dashboard.css">
+</head>
+<body>
+
+<header>
+    <h1>Nodex - Plataforma Logística</h1>
+    <p>Exportación de Reporte (Gerente de Proyectos)</p>
+    <nav>
+        <a href="3_gte-dashboard.html">Panel principal</a> |
+        <a href="3.9_gte-kpi_promedioNodos.html">KPI Nodos</a> |
+        <a href="3.10_gte-grafica.html">Gráfica Costos</a> |
+        <a href="../../auth/login.html">Cerrar sesión</a>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+    <h2>Exportar Cotización por Cuarto en PDF <small>(RF-3.11)</small></h2>
+    <p>Generación y descarga del documento oficial con el desglose del presupuesto financiero por zona.</p>
+
+    <section>
+        <h3>Vista Previa del Reporte Oficial</h3>
+        <table border="1" cellpadding="6" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Área / Habitación</th>
+                    <th>Cantidad Nodos</th>
+                    <th>Costo Materiales</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Centro de Datos A1</td>
+                    <td>24</td>
+                    <td>$28,000.00</td>
+                    <td>$28,000.00</td>
+                </tr>
+                <tr>
+                    <td>Oficinas Administrativas Piso 1</td>
+                    <td>16</td>
+                    <td>$17,200.00</td>
+                    <td>$17,200.00</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><strong>Total Consolidado del Proyecto: $45,200.00 MXN</strong></p>
+    </section>
+
+    <section>
+        <ul>
+            <li>&#128196; <a href="../../public/uploads/orden_compra_001.pdf" target="_blank">Descargar Cotización por Cuarto Oficial (PDF) <small>(TCPDF Local)</small></a></li>
+        </ul>
+    </section>
+</main>
+
+<hr>
+<footer>
+    <p><a href="3_gte-dashboard.html">&larr; Volver al Panel Principal</a></p>
+    <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>
+</footer>
+
+</body>
+</html>

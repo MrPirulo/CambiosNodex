@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel Principal - Nodex (Gerente)</title>
+    <link rel="stylesheet" href="css-gteproyectos/gte-dashboard.css">
+</head>
+<body>
+
+<header>
+    <h1>Nodex - Plataforma Logística</h1>
+    <p>Panel Principal (Gerente de Proyectos)</p>
+    <nav>
+        <a href="3.1_gte-registrarArea.html">Registrar Área</a> |
+        <a href="3.2_gte-catalago.html">Catalogo</a> |
+        <a href="3.5_gte-registrarCierre.html">Registrar Cierre</a> |
+        <a href="3.6_gte-consultarCierre.html">Consultar Cierres</a> |
+        <a href="3.9_gte-kpi_promedioNodos.html">KPI Nodos</a> |
+        <a href="3.10_gte-grafica.html">Gráfica Costos</a> |
+        <a href="3.11_gte-formatoPDF.html">Formato PDF</a> |
+        <a href="../auth/login.html">Cerrar sesión</a>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+    <h2>Bienvenido, Ricardo <small>(Gerente de Proyectos)</small></h2>
+    <p>Usuario: Ricardo Avalos Vargas &nbsp;|&nbsp; Rol: Gerente de Proyectos</p>
+
+    <section>
+        <h3>Estado General de Áreas y Proyectos <small>(RF-3.1 a RF-3.4)</small></h3>
+        <table border="1" cellpadding="6" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Proyecto</th>
+                    <th>Área / Habitación</th>
+                    <th>Medidas</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Torre Corporativa Alfa</td>
+                    <td>Centro de Datos A1</td>
+                    <td>12x8 m</td>
+                    <td>Activo</td>
+                </tr>
+                <tr>
+                    <td>Torre Corporativa Alfa</td>
+                    <td>Oficinas Piso 1</td>
+                    <td>15x10 m</td>
+                    <td>En Planeación</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3>Distribución Financiera por Área <small>(RF-3.10)</small></h3>
+        <figure>
+            <img src="../../public/img/grafica-usuarios.png" alt="Gráfica de Costos por Área" width="400">
+            <figcaption>Figura 1. Comparativa del costo financiero total distribuido por área arquitectónica.</figcaption>
+        </figure>
+    </section>
+
+    <section>
+        <h3>Exportación de Documentos</h3>
+        <ul>
+            <li>&#128196; <a href="3.11_gte-formatoPDF.html">Exportar Cotización por Cuarto (PDF) <small>(RF-3.11)</small></a></li>
+        </ul>
+    </section>
+<p><a href="../../auth/1.1_login.html">&larr; Cerrar sesión y salir</a></p>    
+</main>
+
+<hr>
+<footer>
+    
+    <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>
+</footer>
+
+</body>
+</html> 
