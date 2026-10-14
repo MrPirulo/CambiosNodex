@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Ajusta la ruta de tu CSS según prefieras -->
+    <link rel="stylesheet" href="../css-admin/css-user/usuarios-listados.css">
+    <title>Listado de Proyectos</title>
+</head>
+<body>
+
+<header>
+    <h1>NODEX</h1>
+    <p>Panel del Administrador &mdash; Gestión de Proyectos</p>
+    <nav>
+        <a href="../admin-dashboard.html">Panel principal</a> |
+        <a href="../Usuarios/1.3_usuarios-listado.html">Usuarios</a> |
+        <a href="1.9_proyectos-listado.html">Proyectos</a> |
+        <a href="../1.7_admin-Bitacora.html">Bitácora</a> |
+        <a href="../../../../auth/1.1_login.html">Cerrar sesión</a>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+    <h2>Listado de proyectos <small>(RF-1.9)</small></h2>
+    <p>Consulta la información general y el estado de los proyectos y obras registrados en el sistema.</p>
+
+    <p>
+        <a href="1.8_proyecto-alta.html">Registrar nuevo proyecto</a> <small>(RF-1.8)</small>
+    </p>
+
+    <table border="1" cellpadding="6" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre del Proyecto</th>
+                <th>Cliente / Dependencia</th>
+                <th>Fecha de Inicio</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>PRY-001</td>
+                <td>Edificio Central F</td>
+                <td>Instituto Tecnológico</td>
+                <td>10/08/2026</td>
+                <td>Activo</td>
+                <td>
+                    <a href="1.10_proyecto-detalle.html?id=PRY-001">&#128269; Ver</a> <small>(RF-1.10)</small> |
+                    <a href="1.11_proyecto-edicion.html?id=PRY-001">&#9998; Editar</a> <small>(RF-1.11)</small> |
+                    <a href="1.12_proyecto-desactivar.html?id=PRY-001">&#128465; Cancelar</a> <small>(RF-1.12)</small>
+                </td>
+            </tr>
+            <tr>
+                <td>PRY-002</td>
+                <td>Torre de Innovación</td>
+                <td>Gobierno del Estado</td>
+                <td>15/09/2026</td>
+                <td>Cotización</td>
+                <td>
+                    <a href="1.10_proyecto-detalle.html?id=PRY-001">&#128269; Ver</a> <small>(RF-1.10)</small> |
+                    <a href="1.11_proyecto-edicion.html?id=PRY-001">&#9998; Editar</a> <small>(RF-1.11)</small> |
+                    <a href="1.12_proyecto-desactivar.html?id=PRY-001">&#128465; Cancelar</a> <small>(RF-1.12)</small>
+                </td>
+            </tr>
+            <tr>
+                <td>PRY-003</td>
+                <td>Biblioteca Central</td>
+                <td>Secretaría de Educación</td>
+                <td>01/01/2026</td>
+                <td>Cerrado</td>
+                <td>
+                    <a href="1.10_proyecto-detalle.html?id=PRY-001">&#128269; Ver</a> <small>(RF-1.10)</small> |
+                    <a href="1.11_proyecto-edicion.html?id=PRY-001">&#9998; Editar</a> <small>(RF-1.11)</small> |
+                    <a href="1.12_proyecto-desactivar.html?id=PRY-001">&#128465; Cancelar</a> <small>(RF-1.12)</small>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><a href="../admin-dashboard.html">&larr; Regresar al panel principal</a></p>
+</main>
+
+<hr>
+<footer>
+    <p>Prototipo 1 &mdash; AEB-1055 Programación Web</p>
+</footer>
+
+</body>
+</html>

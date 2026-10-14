@@ -3,46 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css-admin/css-user/usuario-Alta-Edicion.css">
-    <title>Alta de Usuario</title>
+    <title>Edición de Usuario</title>
 </head>
 <body>
 
 <header>
-    <img src="../../../public/img/logo.png" alt="Logotipo del Sistema Nodex" width="200">
     <h1>NODEX</h1>
     <p>Panel del Administrador &mdash; Gestión de usuarios</p>
     <nav>
         <a href="../admin-dashboard.html">Panel principal</a> |
         <a href="1.3_usuarios-listado.html">Usuarios</a> |
+        <a href="../Proyectos/1.9_proyectos-listado.html">Proyectos</a> |
         <a href="../1.7_admin-Bitacora.html">Bitácora</a> |
-        <a href="../../../auth/login.html">Cerrar sesión</a>
+        <a href="../../../../auth/1.1_login.html">Cerrar sesión</a>
     </nav>
 </header>
 
 <hr>
 
 <main>
-    <h2>Alta de usuario <small>(RF-1.2)</small></h2>
-    <p>Completa el siguiente formulario para dar de alta un nuevo usuario. Al guardar, el sistema regresará al listado de usuarios.</p>
+    <h2>Edición de usuario <small>(RF-1.4)</small></h2>
+    <p>Actualiza los datos, la contraseña o el rol del usuario existente.</p>
 
     <form action="1.3_usuarios-listado.html" method="get">
         <fieldset>
             <legend>Datos generales</legend>
             <p>
+                <label for="id">ID de usuario:</label><br>
+                <input type="text" id="id" name="id" value="001" readonly>
+            </p>
+            <p>
                 <label for="nombre">Nombre completo:</label><br>
-                <input type="text" id="nombre" name="nombre" placeholder="Nombre y apellidos" required>
+                <input type="text" id="nombre" name="nombre" value="Jesus Andres Dionicio Garcia" required>
             </p>
             <p>
                 <label for="correo">Correo electrónico:</label><br>
-                <input type="email" id="correo" name="correo" placeholder="usuario@tecnm.edu.mx" required>
+                <input type="email" id="correo" name="correo" value="jromerocastro@tecnm.edu.mx" required>
             </p>
             <p>
-                <label for="password">Contraseña cifrada:</label><br>
-                <input type="password" id="password" name="password" required>
-            </p>
-            <p>
-                <label for="telefono">Teléfono:</label><br>
-                <input type="tel" id="telefono" name="telefono" placeholder="993-000-0000">
+                <label for="password">Nueva contraseña (opcional):</label><br>
+                <input type="password" id="password" name="password">
             </p>
         </fieldset>
 
@@ -51,8 +51,7 @@
             <p>
                 <label for="rol">Rol del usuario:</label><br>
                 <select id="rol" name="rol" required>
-                    <option value="">-- Selecciona un rol --</option>
-                    <option value="administrador">Administrador</option>
+                    <option value="administrador" selected>Administrador</option>
                     <option value="proyectista">Ing. Proyectista</option>
                     <option value="gerente">Gerente de proyectos</option>
                     <option value="logistica">Supervisor de Logística</option>
@@ -62,8 +61,7 @@
         </fieldset>
 
         <p>
-            <button type="submit">Guardar usuario</button> <small>(RF-1.2)</small>
-            <button type="reset">Limpiar formulario</button>
+            <button type="submit">Actualizar usuario</button> <small>(RF-1.4)</small>
         </p>
     </form>
 

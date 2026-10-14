@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css-admin/admin-dashboard.css" />
+    <title>Panel Principal - Nodex</title>
+</head>
+<body>
+
+<header>
+    <h1>Nodex - Plataforma Logística</h1>
+    <p>Panel Principal del Administrador</p>
+    <nav>
+        <a href="admin-dashboard.html">Panel principal</a> |
+        <a href="Usuarios/1.3_usuarios-listado.html">Usuarios</a> |
+        <a href="Proyectos/1.9_proyectos-listado.html">Proyectos</a> |
+        <a href="1.7_admin-Bitacora.html">Bitácora</a> |
+        <a href="../../../auth/1.1_login.html">Cerrar sesión</a>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+    <h2>Bienvenido, Jesus Andres <small>(Administrador)</small></h2>
+    <p>Usuario: Jesus Andres Dionicio Garcia &nbsp;|&nbsp; Rol: Administrador</p>
+
+    <section>
+        <h3>Accesos directos</h3>
+        <ul>
+            <li>&#128101; <a href="Usuarios/1.3_usuarios-listado.html">Gestión de Usuarios</a> <small>(RF-1.3)</small></li>
+            <li>&#128214; <a href="1.7_admin-Bitacora.html">Bitácora de Accesos y Movimientos</a> <small>(RF-1.7)</small></li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <section>
+        <h3>Indicadores Clave de Rendimiento Globales (KPIs) <small>(RF-1.13)</small></h3>
+        <p>Resumen estadístico de los suministros y proyectos:</p>
+        <table border="1" cellpadding="6" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Métrica / Indicador</th>
+                    <th>Resultado Actual</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Promedio General de Bobinas</strong></td>
+                    <td><strong>12.4 Bobinas</strong> por proyecto</td>
+                </tr>
+                <tr>
+                    <td><strong>Categoría de cable más utilizada</strong></td>
+                    <td>Cable UTP Cat 6 (45% del suministro)</td>
+                </tr>
+                <tr>
+                    <td><strong>Estado de Proyectos</strong></td>
+                    <td>80% Activos vs 20% Cerrados</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <br>
+
+    <section>
+        <h3>Gráfica Comparativa de Proyectos <small>(RF-1.14)</small></h3>
+        <p>Comparativa del costo total acumulado por área en el proyecto seleccionado.</p>
+        <form id="formGrafica" onsubmit="event.preventDefault();">
+            <p>
+                <label for="proyecto_grafica">Seleccionar Proyecto:</label>
+                <select id="proyecto_grafica" name="proyecto_grafica">
+                    <option value="1" selected>Proyecto A - Edificio Central F</option>
+                    <option value="2">Proyecto B - Torre de Innovación</option>
+                    <option value="3">Proyecto C - Biblioteca Central</option>
+                </select>
+                <button type="button" id="btnDescargarGrafica">Descargar Captura (JPG)</button>
+            </p>
+        </form>
+        <figure style="max-width: 600px; margin: 10px 0;">
+            <canvas id="admin-graficaCosto"></canvas>
+            <figcaption><br><strong>Figura 1.</strong> Costo total acumulado por área (Área Polar).</figcaption>
+        </figure>
+    </section>
+
+    <br>
+
+    <section>
+        <h3>Exportación de Reportes Oficiales <small>(RF-1.15)</small></h3>
+        <form action="reporte-generado.pdf" method="get" target="_blank">
+            <p>
+                <label for="tipo_reporte">Seleccione el documento a generar en PDF:</label><br>
+                <select id="tipo_reporte" name="tipo_reporte" required>
+                    <option value="" disabled selected>-- Elija una opción --</option>
+                    <option value="general">Reporte General de Proyectos</option>
+                    <option value="bitacora">Bitácora de Accesos del Sistema</option>
+                    <option value="cotizacion">Cotización por Cuarto (Desglose Financiero)</option>
+                </select>
+            </p>
+            <p>
+                <button type="submit">Generar y descargar PDF</button>
+            </p>
+        </form>
+    </section>
+
+</main>
+
+<hr>
+
+<footer>
+    <p><a href="../../../auth/1.1_login.html"> Cerrar sesión y salir</a></p>
+    <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>
+</footer>
+
+<!-- Librería Chart.js desde CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- Tu archivo JavaScript independiente -->
+<script src="Js-admin/admin-graficaCosto.js"></script>
+
+</body>
+</html>

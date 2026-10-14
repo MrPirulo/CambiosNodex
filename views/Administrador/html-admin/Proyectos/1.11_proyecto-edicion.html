@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css-admin/css-user/usuario-Alta-Edicion.css">
+    <title>Edición de Proyecto</title>
+</head>
+<body>
+
+<header>
+    <h1>NODEX</h1>
+    <p>Panel del Administrador &mdash; Gestión de Proyectos</p>
+    <nav>
+        <a href="../admin-dashboard.html">Panel principal</a> |
+        <a href="../Usuarios/1.3_usuarios-listado.html">Usuarios</a> |
+        <a href="1.9_proyectos-listado.html">Proyectos</a> |
+        <a href="../1.7_admin-Bitacora.html">Bitácora</a> |
+        <a href="../../../../auth/1.1_login.html">Cerrar sesión</a>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+    <h2>Actualizar proyecto <small>(RF-1.11)</small></h2>
+    <p>Modifica la información general de la obra seleccionada.</p>
+
+    <form action="1.9_proyectos-listado.html" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Información General de la Obra</legend>
+            <p>
+                <label for="id_proyecto">ID del Proyecto:</label><br>
+                <input type="text" id="id_proyecto" name="id_proyecto" value="PRY-001" readonly>
+            </p>
+            <p>
+                <label for="nombre_proyecto">Nombre del Proyecto:</label><br>
+                <input type="text" id="nombre_proyecto" name="nombre_proyecto" value="Edificio Central F" required>
+            </p>
+            <p>
+                <label for="cliente">Cliente o Dependencia:</label><br>
+                <input type="text" id="cliente" name="cliente" value="Instituto Tecnológico" required>
+            </p>
+            <p>
+                <label for="estado">Estado del Proyecto:</label><br>
+                <select id="estado" name="estado" required>
+                    <option value="cotizacion">Cotización</option>
+                    <option value="activo" selected>Activo</option>
+                    <option value="cerrado">Cerrado / Finalizado</option>
+                </select>
+            </p>
+            <p>
+                <label for="imagen_fachada">Actualizar Logo o Fachada (Opcional):</label><br>
+                <input type="file" id="imagen_fachada" name="imagen_fachada" accept="image/png, image/jpeg">
+            </p>
+        </fieldset>
+
+        <p>
+            <button type="submit">Actualizar proyecto</button> <small>(RF-1.11)</small>
+        </p>
+    </form>
+
+    <p><a href="1.9_proyectos-listado.html"> Cancelar y regresar al listado</a></p>
+</main>
+
+<hr>
+<footer>
+    <p>Prototipo 1 &mdash; AEB-1055 Programación Web</p>
+</footer>
+
+</body>
+</html>

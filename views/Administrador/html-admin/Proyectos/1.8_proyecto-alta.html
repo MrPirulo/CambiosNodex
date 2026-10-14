@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css-admin/css-user/usuario-Alta-Edicion.css">
+    <title>Alta de Proyecto</title>
+</head>
+<body>
+
+<header>
+    <h1>NODEX</h1>
+    <p>Panel del Administrador &mdash; Gestión de Proyectos</p>
+    <nav>
+        <a href="../admin-dashboard.html">Panel principal</a> |
+        <a href="../Usuarios/1.3_usuarios-listado.html">Usuarios</a> |
+        <a href="1.9_proyectos-listado.html">Proyectos</a> |
+        <a href="../1.7_admin-Bitacora.html">Bitácora</a> |
+        <a href="../../../../auth/1.1_login.html">Cerrar sesión</a>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+    <h2>Registrar nuevo proyecto <small>(RF-1.8)</small></h2>
+    <p>Ingresa la información general de la obra y sube una imagen de referencia.</p>
+
+    <!-- enctype="multipart/form-data" es necesario para la subida de archivos -->
+    <form action="1.9_proyectos-listado.html" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Información General de la Obra</legend>
+            <p>
+                <label for="nombre_proyecto">Nombre del Proyecto:</label><br>
+                <input type="text" id="nombre_proyecto" name="nombre_proyecto" placeholder="Ej. Edificio Administrativo" required>
+            </p>
+            <p>
+                <label for="cliente">Cliente o Dependencia:</label><br>
+                <input type="text" id="cliente" name="cliente" required>
+            </p>
+            <p>
+                <label for="fecha_inicio">Fecha de inicio proyectada:</label><br>
+                <input type="date" id="fecha_inicio" name="fecha_inicio" required>
+            </p>
+            <p>
+                <label for="presupuesto">Presupuesto Inicial Estimado ($ MXN):</label><br>
+                <input type="number" id="presupuesto" name="presupuesto" min="0" step="0.01">
+            </p>
+            <p>
+                <label for="imagen_fachada">Logo o Fachada del Proyecto:</label><br>
+                <input type="file" id="imagen_fachada" name="imagen_fachada" accept="image/png, image/jpeg" required>
+            </p>
+        </fieldset>
+
+        <p>
+            <button type="submit">Guardar proyecto</button> <small>(RF-1.8)</small>
+            <button type="reset">Limpiar formulario</button>
+        </p>
+    </form>
+
+    <p><a href="1.9_proyectos-listado.html"> Cancelar y regresar al listado</a></p>
+</main>
+
+<hr>
+<footer>
+    <p>Prototipo 1 &mdash; AEB-1055 Programación Web</p>
+</footer>
+
+</body>
+</html>
