@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cálculo de Metraje - Nodex</title>
+     <link rel="stylesheet" href="css-ingproyectista/ing-estadisticas.css">
+</head>
+<body>
+
+<header>
+    <img src="../../public/img/logo.png" alt="Logotipo del Sistema Nodex" width="200">
+    <h1>NODEX</h1>
+    <p>Panel del Ing. Proyectista &mdash; Cálculo de Ingeniería</p>
+    <nav>
+        <a href="ing-dashboard.html">Panel principal</a> |
+        <a href="ing-cable-listado.html">Catálogo Cables</a> |
+        <a href="ing-estadisticas.html">Calcular Metraje</a> |
+        <a href="ing-grafica.html">Gráfica</a> |
+        <a href="ing-reporte.html">Reporte PDF</a> |
+        <a href="../../index.html">Cerrar sesión</a>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+    <h2>Cálculo de metraje total requerido <small>(RF-18)</small></h2>
+
+    <form action="ing-estadisticas.html" method="get">
+        <fieldset>
+            <legend>Calculadora por Área Arquitectónica</legend>
+            <p><label>Área o Habitación:</label><br><input type="text" name="area" required></p>
+            <p><label>Número de nodos:</label><br><input type="number" name="nodos" required></p>
+            <p><label>Distancia estimada (Metros):</label><br><input type="number" name="distancia" step="0.1" required></p>
+            <p><button type="submit">Ejecutar cálculo</button></p>
+        </fieldset>
+    </form>
+
+    <section>
+        <h3>Último cálculo registrado (Simulación)</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Área</th><th>Nodos</th><th>Distancia</th><th>Metraje Total</th></tr>
+            <tr><td>Site Principal</td><td>24</td><td>45 m</td><td><strong>1,080 metros</strong></td></tr>
+        </table>
+    </section>
+
+    <p><a href="ing-dashboard.html">&larr; Regresar al panel principal</a></p>
+</main>
+
+<hr>
+<footer>
+    <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>
+</footer>
+
+</body>
+</html>

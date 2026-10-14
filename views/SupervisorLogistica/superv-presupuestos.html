@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cierre de Presupuesto - NODEX</title>
+    <link rel="stylesheet" href="css-superv/superv-presupuestos.css">
+</head>
+<body>
+    <header>
+        <h1>Nodex - Plataforma Logística</h1>
+        <p>Panel del Supervisor de Logística</p>
+        <nav>
+            <a href="superv-index.html">Inicio (Panel)</a> |
+            <a href="superv-dashboard.html">Dashboard Directivo</a> |
+            <a href="superv-proyectos.html">Proyectos</a> |
+            <a href="superv-areas.html">Áreas</a> |
+            <a href="superv-presupuestos.html">Presupuestos</a> |
+            <a href="superv-ordenes-compra.html">Órdenes de Compra</a> |
+            <a href="../../index.html">Volver al Menú Principal</a>
+        </nav>
+    </header>
+    <hr>
+
+    <main>
+        <h2>Procesar Cierre de Presupuesto</h2>
+        <p>Consolidación financiera de costos de cableado estructurado y hardware de terminación por área.</p>
+
+        <!-- RF-4.5: Cierre de presupuesto financiero sumando costos por habitación -->
+        <section id="ejecutar-cierre">
+            <h3>Sumar Costos por Habitación (RF-4.5)</h3>
+            <p><strong>RF-4.5:</strong> El sistema permite procesar el cierre de presupuesto financiero sumando costos por habitación.</p>
+            <form action="superv-presupuestos.html" method="POST">
+                <label for="select_proyecto">Seleccionar Proyecto para Cierre:</label>
+                <select id="select_proyecto" name="select_proyecto">
+                    <option value="1">Corporativo Santa Fe</option>
+                    <option value="2">Hospital General Sur</option>
+                </select>
+                <button type="submit">Ejecutar Cierre Financiero</button>
+            </form>
+        </section>
+
+        <section id="resultado-cierre">
+            <h3>Resultado del Cierre: Corporativo Santa Fe</h3>
+            <p>Desglose acumulado por área arquitectónica registrada en el proyecto seleccionado:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Habitación / Área</th>
+                        <th>Costo Cableado</th>
+                        <th>Costo Hardware</th>
+                        <th>Subtotal Área</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Oficina Administrativa A</td>
+                        <td>$ 5,400.00</td>
+                        <td>$ 2,100.00</td>
+                        <td>$ 7,500.00</td>
+                    </tr>
+                    <tr>
+                        <td>Site Principal - Piso 3</td>
+                        <td>$ 12,000.00</td>
+                        <td>$ 8,500.00</td>
+                        <td>$ 20,500.00</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" align="right"><strong>Total del Presupuesto:</strong></td>
+                        <td><strong>$ 28,000.00</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <hr>
+    <footer>
+        <p><small>NODEX &mdash; Módulo de Supervisión Logística a cargo de Carlos Jhovany Damian Garcia &mdash; AEB-1055 Programación Web</small></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Cables - Nodex</title>
+    <link rel="stylesheet" href="css-ingproyectista/ing-usuario-form.css">
+</head>
+</head>
+<body>
+
+<header>
+    <img src="../../public/img/logo.png" alt="Logotipo del Sistema Nodex" width="200">
+    <h1>NODEX</h1>
+    <p>Panel del Ing. Proyectista &mdash; Gestión de Catálogos</p>
+    <nav>
+        <a href="ing-dashboard.html">Panel principal</a> |
+        <a href="ing-cable-listado.html">Catálogo Cables</a> |
+        <a href="ing-estadisticas.html">Calcular Metraje</a> |
+        <a href="ing-grafica.html">Gráfica</a> |
+        <a href="ing-reporte.html">Reporte PDF</a> |
+        <a href="../../index.html">Cerrar sesión</a>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+    <h2>Alta y Actualización de Cables <small>(RF-07, RF-09)</small></h2>
+
+    <form action="ing-cable-listado.html" method="get">
+        <fieldset>
+            <legend>Datos del Material</legend>
+            <p><label>Código del Cable:</label><br><input type="text" name="codigo" required></p>
+            <p><label>Descripción / Tipo:</label><br><input type="text" name="descripcion" required></p>
+            <p><label>Precio Actual ($):</label><br><input type="number" name="precio" step="0.01" required></p>
+            <p><label>Imagen (caja/bobina):</label><br><input type="file" name="imagen" accept="image/*"></p>
+        </fieldset>
+        <p>
+            <button type="submit">Guardar información</button>
+            <button type="reset">Limpiar formulario</button>
+        </p>
+    </form>
+    
+    <p><a href="ing-cable-listado.html">&larr; Cancelar y regresar al catálogo</a></p>
+</main>
+
+<hr>
+<footer>
+    <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>
+</footer>
+
+</body>
+</html>

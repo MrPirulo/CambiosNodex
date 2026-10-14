@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Hardware - NODEX</title>
+    <link rel="stylesheet" href="css-gteproyectos/gte-eliminar12.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>NODEX</h1>
+
+        <nav>
+            <a href="gte-dashboard.html">Panel principal</a> |
+            <a href="gte-registrar10.html">Registrar</a> |
+            <a href="gte-catalago11.html">Catalogo</a> |
+            <a href="gte-editar13.html">Actualizar</a> |
+            <a href="gte-asignacion19.html">Asignación</a> |
+            <a href="gte-kpi23.html">Panel Costos</a> |
+            <a href="gte-grafica27.html">Gráfica</a> |
+            <a href="gte-formato31.html">Formato PDF</a> |
+            <a href="../../login.html">Cerrar sesión</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <h2>Eliminar Hardware <small>(RF-12)</small></h2>
+
+        <p>
+            Seleccione el Hardware que desea eliminar del catálogo.
+        </p>
+
+        <form>
+
+            <p>
+                <label for="hardware">
+                    Hardware a eliminar:
+                </label><br>
+
+                <select id="hardware" name="hardware">
+                    <option value="">Seleccione un Hardware</option>
+                    <option value="HW-001">
+                        HW-001 - Jack Keystone Cat 6
+                    </option>
+                    <option value="HW-002">
+                        HW-002 - Patch Panel 24 Puertos
+                    </option>
+                    <option value="HW-003">
+                        HW-003 - Jack Keystone Cat 6A
+                    </option>
+                    <option value="HW-004">
+                        HW-004 - Patch Panel 48 Puertos
+                    </option>
+                </select>
+            </p>
+
+            <p>
+                <label for="motivo">
+                    Motivo de eliminación:
+                </label><br>
+
+                <textarea id="motivo"
+                          name="motivo"
+                          rows="4"
+                          cols="50"
+                          placeholder="Indique el motivo por el cual el producto será eliminado"></textarea>
+            </p>
+
+            <p>
+                <strong>
+                    ¿Está seguro de que desea eliminar este producto?
+                </strong>
+            </p>
+
+            <p>
+                <button type="button">
+                    Confirmar eliminación
+                </button>
+
+                <a href="gte-catalago11.html">
+                    Cancelar
+                </a>
+            </p>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <p>
+            NODEX - Plataforma para trazabilidad logística
+            e ingeniería de costos
+        </p>
+    </footer>
+
+</body>
+</html>
+

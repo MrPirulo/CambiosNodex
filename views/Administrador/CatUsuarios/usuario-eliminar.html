@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css-admin/css-user/usuario-eliminar.css">
+    <title>Eliminar Usuario</title>
+</head>
+<body>
+
+<header>
+    <img src="../../../public/img/logo.png" alt="Logotipo del Sistema Nodex" width="200">
+    <h1>NODEX</h1>
+    <p>Panel del Administrador &mdash; Gestión de usuarios</p>
+    <nav>
+        <a href="../admin-dashboard.html">Panel principal</a> |
+        <a href="usuarios-listado.html">Usuarios</a> |
+        <a href="../admin-grafica.html">Gráfica</a> |
+        <a href="../reporte.html">Reporte PDF</a> |
+        <a href="../../../index.html">Cerrar sesión</a>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+    <h2>Eliminar usuario <small>(RF-1.5)</small></h2>
+
+    <p>&#9888; Estás a punto de eliminar al siguiente usuario del sistema:</p>
+
+    <table border="1" cellpadding="6" cellspacing="0">
+        <tbody>
+            <tr>
+                <th align="left">ID</th>
+                <td>006</td>
+            </tr>
+            <tr>
+                <th align="left">Nombre completo</th>
+                <td>Carlos Eduardo Domínguez Hernández</td>
+            </tr>
+            <tr>
+                <th align="left">Rol</th>
+                <td>Usuario</td>
+            </tr>
+            <tr>
+                <th align="left">Estado actual</th>
+                <td>Inactivo</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Esta acción no se puede deshacer. ¿Deseas continuar?</p>
+
+    <form action="usuarios-listado.html" method="get">
+        <input type="hidden" name="eliminado" value="006">
+        <button type="submit">Confirmar eliminación</button> <small>(RF-1.5)</small>
+    </form>
+
+    <p><a href="usuarios-listado.html" class="btn-cancel">Cancelar y regresar al listado</a></p>
+</main>
+
+<hr>
+
+<footer>
+    <p>Prototipo 1 &mdash; AEB-1055 Programación Web</p>
+</footer>
+
+</body>
+</html>

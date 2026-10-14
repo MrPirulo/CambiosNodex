@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Hardware - NODEX</title>
+    <link rel="stylesheet" href="css-gteproyectos/gte-registrar10.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>NODEX</h1>
+
+        <nav>
+            
+            <a href="gte-dashboard.html">Panel principal</a> |
+            <a href="gte-catalago11.html">Catalogo</a> |
+            <a href="gte-eliminar12.html">Eliminar Hardware</a> |
+            <a href="gte-editar13.html">Actualizar</a> |
+            <a href="gte-asignacion19.html">Asignación</a> |
+            <a href="gte-kpi23.html">Panel Costos</a> |
+            <a href="gte-grafica27.html">Gráfica</a> |
+            <a href="gte-formato31.html">Formato PDF</a> |
+            <a href="../../login.html">Cerrar sesión</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <h2>Registrar nuevo Hardware de red <small>(RF-10)</small></h2>
+
+        <p>
+            Complete la siguiente información para registrar un nuevo
+            componente de Hardware de terminación en el catálogo.
+        </p>
+
+        <form>
+
+            <p>
+                <label for="nombre">Nombre del Hardware:</label><br>
+                <input type="text" id="nombre" name="nombre"
+                       placeholder="Ejemplo: Jack Keystone Cat 6">
+            </p>
+
+            <p>
+                <label for="tipo">Tipo de Hardware:</label><br>
+
+                <select id="tipo" name="tipo">
+                    <option value="">Seleccione una opción</option>
+                    <option value="jack">Jack</option>
+                    <option value="panel">Patch Panel</option>
+                    <option value="conector">Conector</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="marca">Marca:</label><br>
+                <input type="text" id="marca" name="marca"
+                       placeholder="Ejemplo: Panduit">
+            </p>
+
+            <p>
+                <label for="modelo">Modelo:</label><br>
+                <input type="text" id="modelo" name="modelo"
+                       placeholder="Ejemplo: CJ688TGY">
+            </p>
+
+            <p>
+                <label for="caracteristicas">
+                    Características técnicas:
+                </label><br>
+
+                <textarea id="caracteristicas"
+                          name="caracteristicas"
+                          rows="5"
+                          cols="50"
+                          placeholder="Describa las características técnicas del Hardware"></textarea>
+            </p>
+
+            <p>
+                <label for="precio">Precio unitario:</label><br>
+                <input type="number" id="precio" name="precio"
+                       placeholder="0.00" step="0.01">
+            </p>
+
+            <p>
+                <label for="imagen">Imagen del componente:</label><br>
+                <input type="file" id="imagen" name="imagen"
+                       accept="image/*">
+            </p>
+
+            <p>
+                <button type="button">Registrar Hardware</button>
+
+                <a href="gte-listado.html">
+                    Cancelar
+                </a>
+            </p>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <p>
+            NODEX - Plataforma para trazabilidad logística
+            e ingeniería de costos
+        </p>
+    </footer>
+
+</body>
+</html>

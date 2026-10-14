@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css-admin/admin-Bitacora.css" />
+    <title>Nodex - Bitácora de Actividades (RF-06)</title>
+</head>
+<body>
+
+<header>
+    <h1>Nodex - Plataforma Logística</h1> 
+    <nav>
+        <a href="admin-dashboard.html">Panel principal</a> |
+        <a href="admin-suministro.html">Algoritmo Suministro</a> |
+        <a href="admin-promedio.html">KPI Bobinas</a> |
+        <a href="admin-graficaCosto.html">Gráfica Costos</a> |
+        <a href="admin-cotizacion.html">Reporte Cotización</a> |
+        <a href="../../index.html">Cerrar sesión</a>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+    <h2>Consultar bitácora cronológica <small>(RF-06)</small></h2>
+    <p>
+        El sistema muestra la bitácora cronológica con el registro ordenado de inicios de sesión 
+        y movimientos realizados por los usuarios del sistema NODEX.
+    </p>
+
+    <form action="admin-Bitacora.html" method="get">
+        <fieldset>
+            <legend>Filtros de Búsqueda</legend>
+            <p>
+                <label for="fecha_inicio">Fecha inicio:</label>
+                <input type="date" id="fecha_inicio" name="fecha_inicio">
+                &nbsp;
+                <label for="fecha_fin">Fecha fin:</label>
+                <input type="date" id="fecha_fin" name="fecha_fin">
+                &nbsp;
+                <label for="usuario_filtro">Usuario:</label>
+                <input type="text" id="usuario_filtro" name="usuario_filtro" placeholder="Ej. jesus_andres">
+                &nbsp;
+                <button type="submit" formaction="CatUsuarios/usuario-ver.html">Filtrar bitácora</button>
+            </p>
+        </fieldset>
+    </form>
+
+    <br>
+
+    <section>
+        <h3>Registro de Actividades Cronológicas</h3>
+        <table border="1" cellpadding="8" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Fecha y Hora</th>
+                    <th>Usuario</th>
+                    <th>Rol</th>
+                    <th>Acción / Movimiento Registrado</th>
+                    <th>Dirección IP</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01/09/2026 08:30:15</td>
+                    <td>jesus_andres</td>
+                    <td>Administrador</td>
+                    <td>Inicio de sesión exitoso.</td>
+                    <td>192.168.1.10</td>
+                </tr>
+                <tr>
+                    <td>01/09/2026 08:45:22</td>
+                    <td>ana_josefina</td>
+                    <td>Ingeniero Proyectista</td>
+                    <td>Registro de nuevo cable Cat6A en catálogo.</td>
+                    <td>192.168.1.15</td>
+                </tr>
+                <tr>
+                    <td>01/09/2026 09:12:05</td>
+                    <td>ricardo_avalos</td>
+                    <td>Gerente de Proyectos</td>
+                    <td>Actualización de costo en hardware Jack RJ45.</td>
+                    <td>192.168.1.20</td>
+                </tr>
+                <tr>
+                    <td>01/09/2026 10:05:40</td>
+                    <td>carlos_jhovany</td>
+                    <td>Supervisor de Logística</td>
+                    <td>Registro de Área Arquitectónica (Lab Redes).</td>
+                    <td>192.168.1.25</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <p><a href="admin-dashboard.html">Regresar al panel principal</a></p>
+</main>
+
+<hr>
+
+<footer>
+    <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>
+</footer>
+
+</body>
+
+</html>

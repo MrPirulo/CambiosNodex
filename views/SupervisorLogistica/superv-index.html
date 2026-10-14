@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NODEX - Panel de Logística</title>
+    <link rel="stylesheet" href="css-superv/superv-index.css">
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="../../public/img/logo.png" alt="Logo NODEX" width="150">
+        </figure>
+        <h1>Nodex - Plataforma Logística</h1>
+        <p>Panel Operativo del Supervisor de Logística</p>
+        <nav>
+            <a href="superv-index.html">Inicio (Panel)</a> |
+            <a href="superv-dashboard.html">Dashboard Directivo</a> |
+            <a href="superv-proyectos.html">Proyectos</a> |
+            <a href="superv-areas.html">Áreas</a> |
+            <a href="superv-presupuestos.html">Presupuestos</a> |
+            <a href="superv-ordenes-compra.html">Órdenes de Compra</a> |
+            <a href="../../index.html">Volver al Menú Principal</a>
+        </nav>
+    </header>
+    <hr>
+
+    <main>
+        <h2>Bienvenido al Centro de Control Logístico</h2>
+        <p>Gestión de suministro en obra, trazabilidad de áreas arquitectónicas y cierre presupuestal de proyectos.</p>
+
+        <section id="bienvenida">
+            <h3>Ficha del Operador en Turno</h3>
+            <ul>
+                <li><strong>Responsable:</strong> Ing. Carlos Jhovany Damian Garcia</li>
+                <li><strong>Rol Asignado:</strong> Supervisor de Logística</li>
+                <li><strong>Departamento:</strong> Suministro en Obra e Ingeniería de Costos</li>
+                <li><strong>Estado de Sesión:</strong> Activa (Acceso Autorizado)</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="resumen-operativo">
+            <h3>Resumen General de Operaciones Actuales</h3>
+            <p>Estado rápido de los registros administrados en este módulo:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Proyectos Activos</th>
+                        <th>Áreas Arquitectónicas</th>
+                        <th>Presupuestos Cerrados</th>
+                        <th>Promedio Nodos / Área</th>
+                        <th>Órdenes de Compra Emitidas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2 Proyectos</td>
+                        <td>5 Áreas registradas</td>
+                        <td>$ 28,000.00 MXN (1 Proyecto)</td>
+                        <td>14 Nodos</td>
+                        <td>1 Orden (OC-2026-001)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <section id="modulos-rf">
+            <h3>Catálogo de Módulos y Requisitos Funcionales Asignados</h3>
+            <p>Seleccione una sección para gestionar la trazabilidad física y financiera de los proyectos:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Requisito</th>
+                        <th>Módulo del Sistema</th>
+                        <th>Descripción Funcional Oficial</th>
+                        <th>Acceso Directo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>RF-4.1 / RF-4.2</strong></td>
+                        <td>Catálogo de Áreas Arquitectónicas</td>
+                        <td>Registrar habitaciones o sites subiendo su croquis/plano y consultar las áreas asignadas por proyecto.</td>
+                        <td><a href="superv-areas.html">➡️ Ir a Áreas</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>RF-4.3 / RF-4.4</strong></td>
+                        <td>Catálogo de Proyectos Activos</td>
+                        <td>Registrar nuevos proyectos subiendo su logo/fachada y consultar su estado general (Cotización o Cerrado).</td>
+                        <td><a href="superv-proyectos.html">➡️ Ir a Proyectos</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>RF-4.5</strong></td>
+                        <td>Cierre de Presupuesto Financiero</td>
+                        <td>Procesar el cierre financiero sumando los costos de cableado y hardware por cada habitación registrada.</td>
+                        <td><a href="superv-presupuestos.html">➡️ Ir a Presupuestos</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>RF-4.6 / RF-4.7</strong></td>
+                        <td>Tablero Directivo (KPI y Gráfica)</td>
+                        <td>Consultar el KPI del promedio general de nodos por área y visualizar la gráfica de barras comparativa de costos.</td>
+                        <td><a href="superv-dashboard.html">➡️ Ir al Dashboard</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>RF-4.8</strong></td>
+                        <td>Emisión de Órdenes de Compra</td>
+                        <td>Emitir y exportar en formato PDF la Orden de Compra oficial para el suministro de cajas y bobinas de cable.</td>
+                        <td><a href="superv-ordenes-compra.html">➡️ Ir a Órdenes (PDF)</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <section id="actividad-reciente">
+            <h3>Últimos Movimientos del Supervisor</h3>
+            <ol>
+                <li><strong>[OC-2026-001]:</strong> Emisión de Orden de Compra en PDF para <em>Corporativo Santa Fe</em> (45 Bobinas Cat 6) - <a href="../../public/uploads/orden_compra_001.pdf" target="_blank">Ver PDF</a></li>
+                <li><strong>[Cierre Financiero]:</strong> Aprobación de presupuesto para <em>Corporativo Santa Fe</em> por un total de $ 28,000.00 MXN.</li>
+                <li><strong>[Alta de Croquis]:</strong> Registro del plano arquitectónico <code>croquis_piso3.jpg</code> en el área <em>Site Principal - Piso 3</em>.</li>
+            </ol>
+        </section>
+    </main>
+
+    <hr>
+    <footer>
+        <p><small>NODEX &mdash; Módulo de Supervisión Logística a cargo de Carlos Jhovany Damian Garcia &mdash; AEB-1055 Programación Web</small></p>
+    </footer>
+</body>
+</html>

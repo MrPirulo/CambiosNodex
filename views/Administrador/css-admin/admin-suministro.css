@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333333;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+hr{
+    display: none;
+}
+
+/*HEADER & NAVEGACION*/
+header{
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 0.8rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    color: #ffffff;
+}
+
+header p{
+    align-items: center;
+    display:none;
+
+}
+
+header nav{
+    display:flex;
+    align-items: center;
+    gap: 1.2rem;
+    font-size: 0.9rem;
+}
+
+header nav a{
+    color: #ced4da;
+    text-decoration: none;
+    transform: color 0.2s ease-in-out;
+}
+
+header nav a:hover{
+    color: #ffffff;
+}
+/* cerrar sesion*/
+header nav a[href*="index.html"] {
+    background-color: transparent;
+    border: 1px solid #28a745;
+    color: #28a745;
+    padding: 0.35rem 0.8rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+header nav a[href*="index.html"]:hover {
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+/*main*/
+main{
+    max-width: 1200px;
+    width: 90%;
+    margin: 2rem auto;
+    flex: 1; 
+}
+
+/* Encabezado del usuario */
+main > h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 0.2rem;
+}
+
+main > h2 small {
+    font-size: 1rem;
+    color: #6c757d;
+    font-weight: 400;
+}
+
+main > p {
+    color: #6c757d;
+    font-size: 0.95rem;
+    margin-bottom: 1.8rem;
+}
+
+main p a{
+    color: #ced4da;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out; 
+}
+
+main p a:hover{
+     color: #ffffff;
+}
+main > p > a{
+    background-color: transparent;
+    border: 1px solid #28a745;
+    color: #28a745;
+    padding: 0.35rem 0.8rem;
+    border-radius: 4px;
+    font-weight: 600; 
+}
+
+main >p > a:hover{
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+/*filtros*/
+fieldset{
+    border: none;
+    max-width: 1200px;
+    width: 90%;
+    margin: 2rem auto;
+    flex: 1;
+}
+
+legend {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333333;
+    padding: 0;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e9ecef;
+    width: 100%;
+}
+/*
+fieldset legend{
+    font-size: 1.55rem;
+    font-weight: 400;
+    color: #212529;
+    margin-bottom: 0.2rem;
+}*/
+
+fieldset p{
+    font-size: 0.95rem;
+    margin-bottom: 1.8rem;
+}
+
+fieldset label{
+    color: #54595e;
+    font-size: 0.95rem;
+    margin-bottom: 1.8rem;
+}
+
+/* Estilo para kadagiti pagpilian (select) ken pagpennekan ti numero (input type="number") */
+form fieldset p select,
+form fieldset p input[type="number"] {
+  font-family: inherit;
+  font-size: 14px;
+  color: #2d3748;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  padding: 8px 12px;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  margin-top: 4px;
+}
+
+/* Para kadagiti field a select wenno input a mabalin a padakkelen ti kalawa */
+form fieldset p select {
+  min-width: 280px;
+  cursor: pointer;
+}
+
+form fieldset p input[type="number"] {
+  width: 140px;
+}
+
+/* Estilo no i-click wenno pilien ti usuario (Focus state) */
+form fieldset p select:focus,
+form fieldset p input[type="number"]:focus {
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.25);
+}
+
+/* Estilo para iti input a readonly (sebbang a di mabalin usabien) */
+form fieldset p input[readonly] {
+  background-color: #edf2f7;
+  color: #718096;
+  cursor: not-allowed;
+  border-color: #e2e8f0;
+}
+
+/*boton*/
+form fieldset p button{
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid #007bff;
+    color: #007bff;
+    padding: 0.35rem 0.8rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+form fieldset p button:hover{
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+section {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Títulos de Secciones */
+section h3{
+    font-size: 1.15rem;
+    color: #007bff;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+/*estilo de tablas*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: #ffffff;
+}
+
+table, th, td {
+    border: none; /* Quitamos el borde por defecto */
+}
+
+th {
+    background-color: #f8f9fa;
+    color: #495057;
+    font-weight: 600;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    border-bottom: 2px solid #dee2e6;
+    font-size: 0.9rem;
+}
+
+td {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid #e9ecef;
+    color: #333333;
+    font-size: 0.95rem;
+}
+
+tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/*footer*/
+footer {
+    background-color: #f1f3f5;
+    border-top: 1px solid #e9ecef;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+footer a:hover {
+    color: #343a40;
+    text-decoration: underline;
+}

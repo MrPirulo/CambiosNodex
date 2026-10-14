@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Órdenes de Compra - NODEX</title>
+    <link rel="stylesheet" href="css-superv/superv-ordenes-compra.css">
+</head>
+<body>
+    <header>
+        <h1>Nodex - Plataforma Logística</h1>
+        <p>Panel del Supervisor de Logística</p>
+        <nav>
+            <a href="superv-index.html">Inicio (Panel)</a> |
+            <a href="superv-dashboard.html">Dashboard Directivo</a> |
+            <a href="superv-proyectos.html">Proyectos</a> |
+            <a href="superv-areas.html">Áreas</a> |
+            <a href="superv-presupuestos.html">Presupuestos</a> |
+            <a href="superv-ordenes-compra.html">Órdenes de Compra</a> |
+            <a href="../../index.html">Volver al Menú Principal</a>
+        </nav>
+    </header>
+    <hr>
+
+    <main>
+        <h2>Emisión de Órdenes de Compra (Suministro de Bobinas)</h2>
+        <p>Generación y exportación oficial de órdenes de suministro de cableado para cuadrillas en obra.</p>
+
+        <!-- RF-4.8: Emitir y exportar en formato PDF la Orden de Compra -->
+        <section id="ordenes-generadas">
+            <h3>Órdenes Generadas (RF-4.8)</h3>
+            <p><strong>RF-4.8:</strong> El usuario podrá emitir y exportar en formato PDF la Orden de Compra oficial requerida para el suministro de cajas y bobinas de cable.</p>
+            <form action="superv-ordenes-compra.html" method="GET">
+                <label for="buscar_orden">Filtrar por Proyecto / Folio:</label>
+                <input type="text" id="buscar_orden" name="buscar_orden" placeholder="Ej. OC-2026-001">
+                
+                <label for="fecha_orden">Fecha de Emisión:</label>
+                <input type="date" id="fecha_orden" name="fecha_orden">
+                
+                <button type="submit">Buscar Órdenes</button>
+            </form>
+            <br>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Folio</th>
+                        <th>Proyecto</th>
+                        <th>Cajas/Bobinas Requeridas</th>
+                        <th>Acciones (Exportación)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>OC-2026-001</td>
+                        <td>Corporativo Santa Fe</td>
+                        <td>45 Bobinas Cat 6</td>
+                        <td>
+                            <a href="../../public/uploads/orden_compra_001.pdf" target="_blank">&#128424;&#65039; Exportar e Imprimir Orden (PDF)</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <hr>
+    <footer>
+        <p><small>NODEX &mdash; Módulo de Supervisión Logística a cargo de Carlos Jhovany Damian Garcia &mdash; AEB-1055 Programación Web</small></p>
+    </footer>
+</body>
+</html>

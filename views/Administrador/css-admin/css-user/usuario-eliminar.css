@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333333;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+hr {
+    display: none;
+}
+
+/* HEADER & NAVEGACIÓN */
+header {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 0.8rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    color: #ffffff;
+}
+
+header p {
+    display: none;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    font-size: 0.9rem;
+}
+
+header nav a {
+    color: #ced4da;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+header nav a:hover {
+    color: #ffffff;
+}
+
+/* Cerrar sesión */
+header nav a[href*="index.html"] {
+    background-color: transparent;
+    border: 1px solid #28a745;
+    color: #28a745;
+    padding: 0.35rem 0.8rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+header nav a[href*="index.html"]:hover {
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+header figure {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+/* MAIN */
+main {
+    max-width: 900px;
+    width: 90%;
+    margin: 2rem auto;
+    flex: 1;
+}
+
+/* Encabezado */
+main > h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 0.4rem;
+}
+
+main > h2 small {
+    font-size: 1rem;
+    color: #6c757d;
+    font-weight: 400;
+}
+
+/* Advertencia */
+main > p {
+    color: #495057;
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+}
+
+.warning-text {
+    color: #856404;
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+/* ESTILO DE LA TABLA (CARD) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.2rem 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+}
+
+th {
+    background-color: #f8f9fa;
+    color: #495057;
+    font-weight: 600;
+    text-align: left;
+    padding: 0.85rem 1.2rem;
+    border-bottom: 1px solid #dee2e6;
+    font-size: 0.9rem;
+    width: 30%;
+}
+
+td {
+    padding: 0.85rem 1.2rem;
+    border-bottom: 1px solid #e9ecef;
+    color: #212529;
+    font-size: 0.95rem;
+}
+
+tbody tr:last-child th,
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ACCIONES / FORMULARIO */
+form {
+    display: inline-block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+form button[type="submit"] {
+    background-color: #dc3545;
+    color: #ffffff;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #bd2130;
+}
+
+/* Enlace para cancelar */
+.btn-cancel {
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid #007bff;
+    color: #007bff;
+    padding: 0.35rem 0.8rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.btn-cancel:hover {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+/* FOOTER */
+footer {
+    background-color: #f1f3f5;
+    border-top: 1px solid #e9ecef;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}

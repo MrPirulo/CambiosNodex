@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áreas Arquitectónicas - NODEX</title>
+    <link rel="stylesheet" href="css-superv/superv-areas.css">
+</head>
+<body>
+    <header>
+        <h1>Nodex - Plataforma Logística</h1>
+        <p>Panel del Supervisor de Logística</p>
+        <nav>
+            <a href="superv-index.html">Inicio (Panel)</a> |
+            <a href="superv-dashboard.html">Dashboard Directivo</a> |
+            <a href="superv-proyectos.html">Proyectos</a> |
+            <a href="superv-areas.html">Áreas</a> |
+            <a href="superv-presupuestos.html">Presupuestos</a> |
+            <a href="superv-ordenes-compra.html">Órdenes de Compra</a> |
+            <a href="../../index.html">Volver al Menú Principal</a>
+        </nav>
+    </header>
+    <hr>
+
+    <main>
+        <h2>Catálogo de Áreas Arquitectónicas</h2>
+        <p>Registro de habitaciones, sites de telecomunicaciones y consulta de croquis por proyecto.</p>
+
+        <!-- RF-4.1: Registrar Área -->
+        <section id="registro-area">
+            <h3>Registrar Nueva Área / Habitación (RF-4.1)</h3>
+            <p><strong>RF-4.1:</strong> El sistema debe permitir registrar un Área Arquitectónica (habitación/site) subiendo su croquis.</p>
+            <form action="superv-areas.html" method="POST" enctype="multipart/form-data">
+                <label for="id_proyecto">Proyecto:</label>
+                <select id="id_proyecto" name="id_proyecto">
+                    <option value="1">Corporativo Santa Fe</option>
+                    <option value="2">Hospital General Sur</option>
+                </select><br><br>
+
+                <label for="nombre_area">Nombre del Área (Ej. Site Principal):</label>
+                <input type="text" id="nombre_area" name="nombre_area" placeholder="Nombre de la habitación o site..." required><br><br>
+
+                <label for="croquis_area">Subir Croquis/Plano (Imagen):</label>
+                <input type="file" id="croquis_area" name="croquis_area" accept="image/*" required><br><br>
+
+                <button type="submit">Guardar Área</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- RF-4.2: Consultar Áreas -->
+        <section id="consulta-areas">
+            <h3>Consulta de Áreas por Proyecto (RF-4.2)</h3>
+            <p><strong>RF-4.2:</strong> El sistema debe permitir consultar el catálogo de Áreas Arquitectónicas por proyecto.</p>
+            
+            <form action="superv-areas.html" method="GET">
+                <label for="filtro_proyecto">Proyecto:</label>
+                <select id="filtro_proyecto" name="filtro_proyecto">
+                    <option value="todos">Todos los proyectos</option>
+                    <option value="1">Corporativo Santa Fe</option>
+                    <option value="2">Hospital General Sur</option>
+                </select>
+
+                <label for="buscar_area_txt">Buscar área:</label>
+                <input type="text" id="buscar_area_txt" name="buscar_area_txt" placeholder="Ej. Site Principal">
+
+                <label for="fecha_registro_area">Fecha de registro:</label>
+                <input type="date" id="fecha_registro_area" name="fecha_registro_area">
+
+                <button type="submit">Consultar</button>
+            </form>
+            <br>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Proyecto</th>
+                        <th>Área / Habitación</th>
+                        <th>Croquis Adjunto</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Corporativo Santa Fe</td>
+                        <td>Site Principal - Piso 3</td>
+                        <td>croquis_piso3.jpg</td>
+                        <td>
+                            <a href="superv-areas.html">Editar</a> | 
+                            <a href="superv-areas.html">Eliminar</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Corporativo Santa Fe</td>
+                        <td>Oficina Administrativa A</td>
+                        <td>croquis_oficina_a.png</td>
+                        <td>
+                            <a href="superv-areas.html">Editar</a> | 
+                            <a href="superv-areas.html">Eliminar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <hr>
+    <footer>
+        <p><small>NODEX &mdash; Módulo de Supervisión Logística a cargo de Carlos Jhovany Damian Garcia &mdash; AEB-1055 Programación Web</small></p>
+    </footer>
+</body>
+</html>

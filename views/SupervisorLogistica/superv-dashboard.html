@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Logística - NODEX</title>
+    <link rel="stylesheet" href="css-superv/superv-dashboard.css">
+    <!-- Librería base de Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="../../public/img/logo.png" alt="Logo NODEX" width="150">
+        </figure>
+        <h1>Nodex - Plataforma Logística</h1>
+        <p>Panel del Supervisor de Logística</p>
+        <nav>
+            <a href="superv-index.html">Inicio (Panel)</a> |
+            <a href="superv-dashboard.html">Dashboard Directivo</a> |
+            <a href="superv-proyectos.html">Proyectos</a> |
+            <a href="superv-areas.html">Áreas</a> |
+            <a href="superv-presupuestos.html">Presupuestos</a> |
+            <a href="superv-ordenes-compra.html">Órdenes de Compra</a> |
+            <a href="../../index.html">Volver al Menú Principal</a>
+        </nav>
+    </header>
+    <hr>
+    
+    <main>
+        <h2>Tablero Directivo - Logística</h2>
+        <p>Consulta de indicadores clave de rendimiento (KPI) y análisis comparativo de costos por área arquitectónica.</p>
+
+        <!-- RF-4.6: KPI Promedio Nodos -->
+        <section id="kpi-nodos">
+            <h3>Indicadores Clave de Rendimiento - KPI (RF-4.6)</h3>
+            <p><strong>RF-4.6:</strong> El usuario podrá consultar en el tablero directivo el KPI del promedio general de nodos instalados por habitación o área.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Indicador Operativo</th>
+                        <th>Resultado Actual</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Promedio General de Nodos (Por Habitación/Área)</th>
+                        <td><strong>14 Nodos / Área</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- RF-4.7: Gráfica Comparativa de Costo Total -->
+        <section id="analisis-financiero">
+            <h3>Comparativa de Costo Total por Área Arquitectónica (RF-4.7)</h3>
+            <p><strong>RF-4.7:</strong> El sistema debe graficar (Barras) la comparativa de costo total por cada área arquitectónica.</p>
+            
+            <!-- Contenedor del Canvas donde se dibuja Chart.js -->
+            <div class="chart-container">
+                <canvas id="graficaCostosAreas"></canvas>
+            </div>
+            
+            <p>
+                <a href="superv-dashboard.html">Actualizar Gráficas</a>
+            </p>
+        </section>
+    </main>
+
+    <hr>
+    <footer>
+        <p><small>NODEX &mdash; Módulo de Supervisión Logística a cargo de Carlos Jhovany Damian Garcia &mdash; AEB-1055 Programación Web</small></p>
+    </footer>
+
+    <!-- Enlace a tu script dentro de la carpeta js-superv -->
+    <script src="js-superv/superv-grafica.js"></script>
+</body>
+</html>

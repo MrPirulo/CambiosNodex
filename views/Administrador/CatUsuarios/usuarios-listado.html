@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css-admin/css-user/usuarios-listados.css">
+    <title>Listado de Usuarios</title>
+</head>
+<body>
+
+<header>
+    <img src="../../../public/img/logo.png" alt="Logotipo del Sistema Nodex" width="200">
+    <h1>NODEX</h1>
+    <p>Panel del Administrador &mdash; Gestión de usuarios</p>
+    <nav>
+        <a href="../admin-dashboard.html">Panel principal</a> |
+        <a href="usuarios-listado.html">Usuarios</a> |
+        <a href="../admin-estadisticas.html">Estadísticas</a> |
+        <a href="../admin-grafica.html">Gráfica</a> |
+        <a href="../reporte.html">Reporte PDF</a> |
+        <a href="../../../index.html">Cerrar sesión</a>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+    <h2>Listado de usuarios <small>(RF-1.3)</small></h2>
+    <p>
+        A continuación se muestra el listado de usuarios registrados en el sistema.
+        Desde aquí se pueden dar de alta nuevos usuarios, así como consultar, editar
+        o eliminar los existentes (operaciones CRUD simuladas para el prototipo).
+    </p>
+
+    <p>
+        <a href="usuario-Alta-Edicion.html">Nuevo usuario</a> <small>(RF-1.2)</small>
+    </p>
+
+    <table border="1" cellpadding="6" cellspacing="0">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre completo</th>
+                <th>Correo electrónico</th>
+                <th>Rol</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>Jesus Andres Dionicio Garcia</td>
+                <td>jromerocastro@tecnm.edu.mx</td>
+                <td>Administrador</td>
+                <td>Activo</td>
+                <td>
+                    <a href="usuario-ver.html?id=001">&#128269; Ver</a> <small>(RF-1.6)</small> |
+                    <a href="usuario-Alta-Edicion.html?id=001">&#9998; Editar</a> <small>(RF-1.4)</small> |
+                    <a href="usuario-eliminar.html?id=001">&#128465; Eliminar</a> <small>(RF-1.5)</small>
+                </td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Ana Josefina Camacho Torres</td>
+                <td>acamacho@tecnm.edu.mx</td>
+                <td>Ing. Proyectista</td>
+                <td>Activo</td>
+                <td>
+                    <a href="usuario-ver.html?id=002">&#128269; Ver</a> <small>(RF-1-6)</small> |
+                    <a href="usuario-Alta-Edicion.html?id=002">&#9998; Editar</a> <small>(RF-1.4)</small> |
+                    <a href="usuario-eliminar.html?id=002">&#128465; Eliminar</a> <small>(RF-1.5)</small>
+                </td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>Ricardo Avalos Vargas</td>
+                <td>ravalos@tecnm.edu.mx</td>
+                <td>Gerente de Proyectos</td>
+                <td>Activo</td>
+                <td>
+                    <a href="usuario-ver.html?id=003">&#128269; Ver</a> <small>(RF-1.6)</small> |
+                    <a href="usuario-Alta-Edicion.html?id=003">&#9998; Editar</a> <small>(RF-1.4)</small> |
+                    <a href="usuario-eliminar.html?id=003">&#128465; Eliminar</a> <small>(RF-1.5)</small>
+                </td>
+            </tr>
+            <tr>
+                <td>004</td>
+                <td>Pedro Emanuel Andrades Pérez</td>
+                <td>pandrades@alumno.tecnm.mx</td>
+                <td>Usuario</td>
+                <td>Activo</td>
+                <td>
+                    <a href="usuario-ver.html?id=004">&#128269; Ver</a> <small>(RF-1.6)</small> |
+                    <a href="usuario-Alta-Edicion.html?id=004">&#9998; Editar</a> <small>(RF-1.4)</small> |
+                    <a href="usuario-eliminar.html?id=004">&#128465; Eliminar</a> <small>(RF-1.5)</small>
+                </td>
+            </tr>
+            <tr>
+                <td>005</td>
+                <td>Carlos Jhovany Damian Garcia</td>
+                <td>MrPirulo@alumno.tecnm.mx</td>
+                <td>Supervisor de Logística</td>
+                <td>Activo</td>
+                <td>
+                    <a href="usuario-ver.html?id=005">&#128269; Ver</a> <small>(RF-1.6)</small> |
+                    <a href="usuario-Alta-Edicion.html?id=005">&#9998; Editar</a> <small>(RF-1.4)</small> |
+                    <a href="usuario-eliminar.html?id=005">&#128465; Eliminar</a> <small>(RF-1.5)</small>
+                </td>
+            </tr>
+            <tr>
+                <td>006</td>
+                <td>Carlos Eduardo Domínguez Hernández</td>
+                <td>cdominguez@alumno.tecnm.mx</td>
+                <td>Usuario</td>
+                <td>Inactivo</td>
+                <td>
+                    <a href="usuario-ver.html?id=006">&#128269; Ver</a> <small>(RF-1.6)</small> |
+                    <a href="usuario-Alta-Edicion.html?id=006">&#9998; Editar</a> <small>(RF-1.4)</small> |
+                    <a href="usuario-eliminar.html?id=006">&#128465; Eliminar</a> <small>(RF-1.5)</small>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><em>Nota: el prototipo muestra 6 usuarios de ejemplo </em></p>
+
+    <p><a href="../admin-dashboard.html">&larr; Regresar al panel principal</a></p>
+</main>
+
+<hr>
+
+<footer>
+    <p>Prototipo 1 &mdash; AEB-1055 Programación Web</p>
+</footer>
+
+</body>
+</html>

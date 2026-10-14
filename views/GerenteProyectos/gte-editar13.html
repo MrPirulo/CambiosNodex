@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Hardware - NODEX</title>
+    <link rel="stylesheet" href="css-gteproyectos/gte-editar13.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>NODEX</h1>
+
+        <nav>
+            <a href="gte-dashboard.html">Panel principal</a> |
+            <a href="gte-registrar10.html">Registrar</a> |
+            <a href="gte-catalago11.html">Catalogo</a> |
+            <a href="gte-eliminar12.html">Eliminar Hardware</a> |
+            <a href="gte-asignacion19.html">Asignación</a> |
+            <a href="gte-kpi23.html">Panel Costos</a> |
+            <a href="gte-grafica27.html">Gráfica</a> |
+            <a href="gte-formato31.html">Formato PDF</a> |
+            <a href="../../login.html">Cerrar sesión</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <h2>Actualizar Hardware de red <small>(RF-13)</small></h2>
+
+        <p>
+            Modifique las características técnicas del Hardware
+            seleccionado.
+        </p>
+
+        <form>
+
+            <p>
+                <label for="codigo">Código del Hardware:</label><br>
+                <input type="text"
+                       id="codigo"
+                       name="codigo"
+                       value="HW-001"
+                       readonly>
+            </p>
+
+            <p>
+                <label for="nombre">Nombre del Hardware:</label><br>
+                <input type="text"
+                       id="nombre"
+                       name="nombre"
+                       value="Jack Keystone Cat 6">
+            </p>
+
+            <p>
+                <label for="tipo">Tipo de Hardware:</label><br>
+
+                <select id="tipo" name="tipo">
+                    <option value="jack" selected>Jack</option>
+                    <option value="panel">Patch Panel</option>
+                    <option value="conector">Conector</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="marca">Marca:</label><br>
+                <input type="text"
+                       id="marca"
+                       name="marca"
+                       value="Panduit">
+            </p>
+
+            <p>
+                <label for="modelo">Modelo:</label><br>
+                <input type="text"
+                       id="modelo"
+                       name="modelo"
+                       value="CJ688TGY">
+            </p>
+
+            <p>
+                <label for="caracteristicas">
+                    Características Técnicas:
+                </label><br>
+
+                <textarea id="caracteristicas"
+                          name="caracteristicas"
+                          rows="5"
+                          cols="50">cableee</textarea>
+            </p>
+
+            <p>
+                <label for="precio">Precio unitario:</label><br>
+                <input type="number"
+                       id="precio"
+                       name="precio"
+                       value="85.00"
+                       step="0.01">
+            </p>
+
+            <p>
+                <label for="imagen">
+                    Actualizar imagen del componente:
+                </label><br>
+
+                <input type="file"
+                       id="imagen"
+                       name="imagen"
+                       accept="image/*">
+            </p>
+
+            <p>
+                <button type="button">
+                    Guardar cambios
+                </button>
+
+                <a href="gte-listado.html">
+                    Cancelar
+                </a>
+            </p>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <p>
+            NODEX - Plataforma para trazabilidad logística
+            e ingeniería de costos
+        </p>
+    </footer>
+
+</body>
+</html>
+

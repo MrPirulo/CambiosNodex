@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css-admin/admin-promedio.css">
+    <title>Nodex - KPI Promedio de Bobinas (RF-25)</title>
+</head>
+<body>
+
+<header>
+    <h1>Nodex - Plataforma Logística</h1>
+    <p>Panel del Administrador &mdash; Indicadores Directivos</p>
+    <nav>
+        <a href="admin-dashboard.html">Panel principal</a> |
+        <a href="admin-Bitacora.html">Bitácora</a> |
+        <a href="admin-suministro.html">Algoritmo Suministro</a> |
+        <a href="admin-graficaCosto.html">Gráfica Costos</a> |
+        <a href="admin-cotizacion.html">Reporte Cotización</a> |
+        <a href="../../index.html">Cerrar sesión</a>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+    <h2>Monitoreo de Indicador KPI de Bobinas <small>(RF-25)</small></h2>
+    <p>
+        El sistema permite monitorear en el panel el KPI del promedio de bobinas enteras 
+        compradas por cada proyecto ejecutado en la plataforma.
+    </p>
+
+    <section>
+        <fieldset>
+            <legend>Métrica de Desempeño Principal</legend>
+            <h3>Promedio General de Bobinas Compradas por Proyecto:</h3>
+            <p style="font-size: 32px; color: green; margin: 10px 0;">
+                <strong>12.4 Bobinas / Proyecto</strong>
+            </p>
+            <p><small>Basado en el historial de 8 proyectos ejecutados.</small></p>
+        </fieldset>
+    </section>
+
+    <br>
+
+    <section>
+        <h3>Desglose de Proyectos Evaluados</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Proyecto</th>
+                    <th>Estado</th>
+                    <th>Bobinas Compradas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Proyecto A - Edificio Central F</td>
+                    <td>Finalizado</td>
+                    <td>14 Bobinas</td>
+                </tr>
+                <tr>
+                    <td>Proyecto B - Laboratorio Químico</td>
+                    <td>Finalizado</td>
+                    <td>10 Bobinas</td>
+                </tr>
+                <tr>
+                    <td>Proyecto C - Biblioteca Central</td>
+                    <td>Finalizado</td>
+                    <td>13 Bobinas</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2" align="right"><strong>Promedio Calculado (RF-25):</strong></td>
+                    <td><strong>12.4 Bobinas</strong></td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <p><a href="admin-dashboard.html"> Regresar al panel principal</a></p>
+</main>
+
+<hr>
+
+<footer>
+    <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>
+</footer>
+
+</body>
+</html>

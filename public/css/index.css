@@ -1,0 +1,246 @@
+/* =========================================================
+   ESTILO INDIVIDUAL - PORTADA PRINCIPAL (index.css)
+   ========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Desplazamiento suave hacia #acerca y #contacto */
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+hr {
+    display: none;
+}
+
+/* HEADER & NAVEGACIÓN DE PORTADA */
+header {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+header figure {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* Mantiene el logo visible en blanco*/
+}
+
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff;
+    margin-bottom: 0.25rem;
+}
+
+header h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #ced4da;
+    margin-bottom: 1.2rem;
+    max-width: 700px;
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.95rem;
+    border-top: 1px solid #495057;
+    padding-top: 1rem;
+    width: 100%;
+    max-width: 900px;
+}
+
+header nav a {
+    color: #ced4da;
+    text-decoration: none;
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+header nav a:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Destacar el enlace de Iniciar Sesión en la barra superior */
+header nav a[href*="login.html"] {
+    border: 1px solid #28a745;
+    color: #28a745;
+    font-weight: 600;
+}
+
+header nav a[href*="login.html"]:hover {
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+/* CONTENIDO PRINCIPAL (MAIN) */
+main {
+    max-width: 1100px;
+    width: 90%;
+    margin: 2.5rem auto;
+    flex: 1;
+}
+
+/* SECCIONES GENERALES */
+main section {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+main section h2 {
+    font-size: 1.5rem;
+    color: #007bff;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #f1f3f5;
+    padding-bottom: 0.5rem;
+}
+
+main section p {
+    color: #495057;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Estilo para la etiqueta <mark> */
+mark {
+    background-color: #e6f4ea;
+    color: #1e7e34;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* SECCIÓN DE BOTÓN DE INICIO DE SESIÓN (#sesion) */
+#sesion {
+    text-align: center;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding: 1.8rem;
+    border: 1px solid #cbd5e0;
+}
+
+#sesion p {
+    margin: 0;
+}
+
+#sesion a {
+    display: inline-block;
+    background-color: #28a745;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.85rem 2rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(40, 167, 69, 0.25);
+    transition: all 0.2s ease-in-out;
+}
+
+#sesion a:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(40, 167, 69, 0.3);
+}
+
+/* SECCIÓN ACERCA DEL SISTEMA Y TARJETAS DE ROLES (#acerca) */
+#acerca ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.2rem;
+    padding: 0;
+}
+
+#acerca ul li {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-top: 4px solid #007bff;
+    border-radius: 6px;
+    padding: 1.25rem;
+    font-size: 0.92rem;
+    color: #495057;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#acerca ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+    background-color: #ffffff;
+}
+
+#acerca ul li strong {
+    font-size: 1.05rem;
+    color: #212529;
+    display: inline-block;
+    margin-bottom: 0.4rem;
+}
+
+/* FOOTER Y SECCIÓN DE CONTACTO (#contacto) */
+footer {
+    background-color: #343a40;
+    color: #ced4da;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+footer section#contacto {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+footer address {
+    font-style: normal;
+    line-height: 1.7;
+    color: #f8f9fa;
+    margin-bottom: 1rem;
+}
+
+footer > p {
+    border-top: 1px solid #495057;
+    padding-top: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 0.85rem;
+    color: #adb5bd;
+}

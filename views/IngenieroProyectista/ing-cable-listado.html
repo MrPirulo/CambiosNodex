@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Catálogo de Cables - Nodex</title>
+    <link rel="stylesheet" href="css-ingproyectista/ing-cable-listado.css">
+</head>
+<body>
+
+<header>
+    <img src="../../public/img/logo.png" alt="Logotipo del Sistema Nodex" width="200">
+    <h1>NODEX</h1>
+    <p>Panel del Ing. Proyectista &mdash; Gestión de Catálogos</p>
+    <nav>
+        <a href="ing-dashboard.html">Panel principal</a> |
+        <a href="ing-cable-listado.html">Catálogo Cables</a> |
+        <a href="ing-estadisticas.html">Calcular Metraje</a> |
+        <a href="ing-grafica.html">Gráfica</a> |
+        <a href="ing-reporte.html">Reporte PDF</a> |
+        <a href="../../index.html">Cerrar sesión</a>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+    <h2>Catálogo de Cables Disponibles <small>(RF-08)</small></h2>
+    <p>A continuación se muestra el listado del inventario de cables registrados en el sistema.</p>
+
+    <p><a href="ing-usuario-form.html">&#10133; Registrar nuevo cable (con imagen)</a> <small>(RF-07)</small></p>
+
+    <table border="1" cellpadding="6" cellspacing="0">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Código</th>
+                <th>Descripción / Tipo</th>
+                <th>Presentación</th>
+                <th>Precio Actual</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>CBL-UTP-6</td>
+                <td>Cable UTP Categoría 6 (Interior)</td>
+                <td>Bobina (305m)</td>
+                <td>$1,250.00</td>
+                <td><a href="ing-usuario-form.html?id=001">&#9998; Actualizar precio/imagen</a> <small>(RF-09)</small></td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>CBL-FOB-MM</td>
+                <td>Cable Fibra Óptica Monomodo (4 Hilos)</td>
+                <td>Bobina (1000m)</td>
+                <td>$4,500.00</td>
+                <td><a href="ing-usuario-form.html?id=002">&#9998; Actualizar precio/imagen</a> <small>(RF-09)</small></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><a href="ing-dashboard.html">&larr; Regresar al panel principal</a></p>
+</main>
+
+<hr>
+<footer>
+    <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>
+</footer>
+
+</body>
+</html>
