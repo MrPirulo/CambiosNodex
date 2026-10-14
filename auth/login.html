@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="login.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nodex - Iniciar Sesión</title>
+</head>
+<body>
+
+<header>
+    <figure>
+        <img src="../public/img/logo.png" alt="Logotipo del Sistema Nodex" width="200">
+    </figure>
+    <h1>NODEX</h1>
+    <nav aria-label="Navegación principal">
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+        </ul>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+    <section>
+        <h2>Iniciar Sesión <small>(RF-01)</small></h2>
+        <p>Ingresa tus credenciales y presiona el botón correspondiente a tu rol asignado dentro del sistema.</p>
+
+        <!-- Se usa POST o GET según requerimiento de tu prototipo -->
+        <form method="get">
+            
+            <!-- Credenciales de acceso -->
+            <fieldset>
+                <legend>Credenciales de acceso</legend>
+
+                <p>
+                    <label for="usuario">Correo electrónico o usuario:</label><br>
+                    <input 
+                        type="email"
+                        id="usuario" 
+                        name="usuario" 
+                        placeholder="usuario@itvillahermosa.edu.mx" 
+                        autocomplete="username"
+                        required>
+                </p>
+
+                <p>
+                    <label for="password">Contraseña:</label><br>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        placeholder="••••••••" 
+                        autocomplete="current-password"
+                        required>
+                </p>
+
+                <p>
+                    <label for="recordar">
+                        <input type="checkbox" id="recordar" name="recordar" value="si">
+                        Recordar mi sesión en este equipo
+                    </label>
+                </p>
+            </fieldset>
+
+            <br>
+
+            <!-- Selección de Rol mediante Botones de Envío -->
+            <fieldset>
+                <legend>Selecciona tu rol para ingresar <small>(RF-01)</small></legend>
+                <p>Haz clic en el panel correspondiente:</p>
+
+                <p>
+                    <button type="submit" formaction="../views/Administrador/admin-dashboard.html" name="rol" value="admin">
+                        Administrador
+                    </button>
+                </p>
+
+                <p>
+                    <button type="submit" formaction="../views/IngenieroProyectista/ing-dashboard.html" name="rol" value="proyectista">
+                        Ing. Proyectista
+                    </button>
+                </p>
+
+                <p>
+                    <button type="submit" formaction="../views/GerenteProyectos/gte-dashboard.html" name="rol" value="gerente">
+                        Gerente de Proyectos
+                    </button>
+                </p>
+
+                <p>
+                    <button type="submit" formaction="../views/SupervisorLogistica/superv-index.html" name="rol" value="logistica">
+                        Supervisor de Logística
+                    </button>
+                </p>
+
+            </fieldset>
+
+            <br>
+
+            <p>
+                <button type="reset">Limpiar campos</button>
+            </p>
+
+        </form>
+
+        <p>
+            <a href="../index.html">Regresar al inicio</a>
+        </p>
+    </section>
+</main>
+
+<hr>
+
+<footer>
+    <p><small>Prototipo 1 &mdash; AEB-1055 Programación Web</small></p>
+</footer>
+
+</body>
+</html>

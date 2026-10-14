@@ -1,0 +1,264 @@
+/* ==========================================================================
+   RESET & CONFIGURACIÓN BASE
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333333;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Ocultar las líneas horizontales nativas <hr> */
+hr {
+    display: none;
+}
+
+/* ==========================================================================
+   HEADER (Barra Institucional Nodex)
+   ========================================================================== */
+header {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 0.8rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+header figure {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* Mantiene el logo visible en blanco*/
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav a {
+    background-color: transparent;
+    border: 1px solid #0d7a4d;
+    border-radius: 5px;
+    color:#0d7a4d;
+    padding: 0.35rem 0.8rem;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+
+header nav a:hover {
+    background-color: #0d7a4d;
+    color:#ffffff;
+    opacity: 1;
+}
+
+/* ==========================================================================
+   CONTENEDOR PRINCIPAL (MAIN & CARD LOGIN)
+   ========================================================================== */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 1rem;
+}
+
+section {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 480px;
+    padding: 2.5rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    font-size: 1.6rem;
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 0.3rem;
+}
+
+section h2 small {
+    font-size: 0.85rem;
+    color: #6c757d;
+    font-weight: normal;
+}
+
+section > p {
+    font-size: 0.9rem;
+    color: #666666;
+    text-align: center;
+    margin-bottom: 1.8rem;
+}
+
+/* ==========================================================================
+   FORMULARIO Y CAMPOS (FIELDSETS & INPUTS)
+   ========================================================================== */
+fieldset {
+    border: none;
+    padding: 0;
+    margin-bottom: 1.2rem;
+}
+
+legend {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #2c3e50;
+    margin-bottom: 0.8rem;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #eef0f2;
+    padding-bottom: 0.3rem;
+}
+
+legend small {
+    color: #888;
+}
+
+label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #495057;
+    display: inline-block;
+    margin-bottom: 0.3rem;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+    background-color: #fdfdfd;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #0d7a4d;
+    box-shadow: 0 0 0 3px rgba(13, 122, 77, 0.15);
+    background-color: #ffffff;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+    accent-color: #0d7a4d;
+    margin-right: 0.4rem;
+    transform: scale(1.1);
+}
+
+label[for="recordar"] {
+    font-weight: normal;
+    color: #555555;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-top: 0.3rem;
+}
+
+/* ==========================================================================
+   BOTONES DE INGRESO (ROLES)
+   ========================================================================== */
+fieldset:nth-of-type(2) p {
+    margin-bottom: 0.6rem;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #0d7a4d;
+    background-color: #ffffff;
+    color: #0d7a4d;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color: #0d7a4d;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(13, 122, 77, 0.2);
+}
+
+/* Botón de limpiar */
+button[type="reset"] {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #dc3545;
+    border-radius: 5px;
+    color: #dc3545;
+    padding: 0.35rem 0.8rem;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+button[type="reset"]:hover {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+/* Enlace regresar */
+main section > p:last-child {
+    margin-top: 1.2rem;
+    margin-bottom: 0;
+}
+
+main section > p:last-child a {
+    background-color: transparent;
+    border: 1px solid #0d7a4d;
+    border-radius: 5px;
+    color:#0d7a4d;
+    padding: 0.35rem 0.8rem;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.2s ease;
+    font-weight: 500;
+}
+
+main section > p:last-child a:hover {
+    background-color: #0d7a4d;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e9ecef;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
