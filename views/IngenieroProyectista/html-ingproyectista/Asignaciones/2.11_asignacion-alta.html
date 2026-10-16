@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css-ingproyectista/asignaciones.css">
+    <title>Asignar Hardware</title>
+</head>
+<body>
+
+<header>
+    <h1>NODEX</h1>
+    <p>Panel del Ing. Proyectista &mdash; Asignación de Hardware</p>
+    <nav>
+        <a href="../ing-dashboard.html">Panel principal</a> |
+        <a href="../Cables/2.2_cables-listado.html">Cables</a> |
+        <a href="../Calculos/2.7_calculos-listado.html">Cálculos de Metraje</a> |
+        <a href="../Asignaciones/2.12_asignaciones-listado.html">Asignaciones Hardware</a> |
+        <a href="../../../../auth/1.1_login.html">Cerrar sesión</a>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+    <h2>Registrar asignación de hardware <small>(RF-2.11)</small></h2>
+    <form action="2.12_asignaciones-listado.html" method="post">
+        <fieldset>
+            <legend>Asignación a Nodos</legend>
+            <p>
+                <label for="nodo">Nodo Destino:</label><br>
+                <select id="nodo" name="nodo" required>
+                    <option value="101A">Nodo-101A</option>
+                </select>
+            </p>
+            <p>
+                <label for="hardware">Hardware Específico:</label><br>
+                <select id="hardware" name="hardware" required>
+                    <option value="H1">Jack RJ45 Cat 6A</option>
+                    <option value="H2">Patch Panel 24 puertos</option>
+                </select>
+            </p>
+            <p>
+                <label for="cantidad">Cantidad de piezas:</label><br>
+                <input type="number" id="cantidad" name="cantidad" value="1" min="1" required>
+            </p>
+        </fieldset>
+        <p>
+            <button type="submit">Guardar Asignación</button>
+            <button type="reset">Limpiar</button>
+        </p>
+    </form>
+    <p><a href="2.12_asignaciones-listado.html"> Cancelar y regresar al listado</a></p>
+</main>
+
+<hr>
+<footer>
+    <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>
+</footer>
+</body>
+</html>

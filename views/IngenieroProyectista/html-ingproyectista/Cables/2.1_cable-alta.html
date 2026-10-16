@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css-ingproyectista/cables.css">
+    <title>Alta de Cable</title>
+</head>
+<body>
+
+<header>
+    <h1>NODEX</h1>
+    <p>Panel del Ing. Proyectista &mdash; Catálogo de Cables</p>
+    <nav>
+        <a href="../ing-dashboard.html">Panel principal</a> |
+        <a href="../Cables/2.2_cables-listado.html">Cables</a> |
+        <a href="../Calculos/2.7_calculos-listado.html">Cálculos de Metraje</a> |
+        <a href="../Asignaciones/2.12_asignaciones-listado.html">Asignaciones Hardware</a> |
+        <a href="../../../../auth/1.1_login.html">Cerrar sesión</a>
+    </nav>
+
+<hr>
+
+<main>
+    <h2>Registrar nuevo tipo de cable <small>(RF-2.1)</small></h2>
+    
+    <form action="2.2_cables-listado.html" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Características Técnicas</legend>
+            <p>
+                <label for="categoria">Categoría del Cable:</label><br>
+                <input type="text" id="categoria" name="categoria" placeholder="Ej. Cat 6A" required>
+            </p>
+            <p>
+                <label for="descripcion">Descripción / Marca:</label><br>
+                <input type="text" id="descripcion" name="descripcion" placeholder="Ej. Bobina Panduit 305m Blanco" required>
+            </p>
+            <p>
+                <label for="costo">Costo unitario por metro ($):</label><br>
+                <input type="number" step="0.01" id="costo" name="costo" required>
+            </p>
+            <p>
+                <label for="imagen_cable">Fotografía de la caja/bobina:</label><br>
+                <input type="file" id="imagen_cable" name="imagen_cable" accept="image/*" required>
+            </p>
+        </fieldset>
+        <p>
+            <button type="submit">Guardar Cable</button>
+            <button type="reset">Limpiar</button>
+        </p>
+    </form>
+
+    <p><a href="2.2_cables-listado.html"> Cancelar y regresar al listado</a></p>
+</main>
+
+<hr>
+<footer>
+    <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css-ingproyectista/calculos.css">
+    <title>Historial de Cálculos</title>
+</head>
+<body>
+
+<header>
+    <h1>NODEX</h1>
+    <p>Panel del Ing. Proyectista &mdash; Memoria de Cálculo</p>
+    <nav>
+        <a href="../ing-dashboard.html">Panel principal</a> |
+        <a href="../Cables/2.2_cables-listado.html">Cables</a> |
+        <a href="../Calculos/2.7_calculos-listado.html">Cálculos de Metraje</a> |
+        <a href="../Asignaciones/2.12_asignaciones-listado.html">Asignaciones Hardware</a> |
+        <a href="../../../../auth/1.1_login.html">Cerrar sesión</a>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+    <h2>Historial transaccional de metraje <small>(RF-2.7)</small></h2>
+    <p><a href="2.6_calculo-alta.html">Registrar Nuevo Cálculo</a> <small>(RF-2.6)</small></p>
+
+    <table border="1" cellpadding="6" cellspacing="0">
+        <thead>
+            <tr>
+                <th>ID Trx</th>
+                <th>Área</th>
+                <th>Nodo</th>
+                <th>Distancia (m)</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>TRX-100</td>
+                <td>Edificio F - Planta Baja</td>
+                <td>Nodo-101A</td>
+                <td>45.5</td>
+                <td>
+                    <a href="2.8_calculo-detalle.html?id=TRX-100">&#128269; Ver</a> <small>(RF-2.8)</small> |
+                    <a href="2.9_calculo-edicion.html?id=TRX-100">&#9998; Editar</a> <small>(RF-2.9)</small> |
+                    <a href="2.10_calculo-desactivar.html?id=TRX-100">&#128465; Cancelar</a> <small>(RF-2.10)</small>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p><a href="../ing-dashboard.html">&larr; Regresar al panel principal</a></p>
+</main>
+
+<hr>
+<footer>
+    <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>
+</footer>
+</body>
+</html>

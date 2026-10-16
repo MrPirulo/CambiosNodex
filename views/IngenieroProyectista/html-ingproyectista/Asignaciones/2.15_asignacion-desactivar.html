@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css-ingproyectista/asignaciones.css">
+    <title>Cancelar Asignación</title>
+</head>
+<body>
+
+<header>
+    <h1>NODEX</h1>
+    <p>Panel del Ing. Proyectista &mdash; Asignación de Hardware</p>
+    <nav>
+        <a href="../ing-dashboard.html">Panel principal</a> |
+        <a href="../Cables/2.2_cables-listado.html">Cables</a> |
+        <a href="../Calculos/2.7_calculos-listado.html">Cálculos de Metraje</a> |
+        <a href="../Asignaciones/2.12_asignaciones-listado.html">Asignaciones Hardware</a> |
+        <a href="../../../../auth/1.1_login.html">Cerrar sesión</a>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+    <h2>Cancelar asignación de hardware <small>(RF-2.15)</small></h2>
+    <p>&#9888; Estás a punto de cancelar la asignación de hardware a un nodo:</p>
+    <table border="1" cellpadding="6" cellspacing="0">
+        <tbody>
+            <tr><th align="left">ID Asignación</th><td>ASG-001</td></tr>
+            <tr><th align="left">Nodo</th><td>Nodo-101A</td></tr>
+            <tr><th align="left">Pieza</th><td>Jack RJ45 Cat 6A</td></tr>
+        </tbody>
+    </table>
+    <form action="2.12_asignaciones-listado.html" method="get">
+        <input type="hidden" name="cancelar" value="ASG-001">
+        <button type="submit">Confirmar cancelación</button>
+    </form>
+    <p><a href="2.12_asignaciones-listado.html" class="btn-cancel">Cancelar y regresar al listado</a></p>
+</main>
+
+<hr>
+<footer>
+    <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>
+</footer>
+</body>
+</html>

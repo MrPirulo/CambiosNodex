@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css-ingproyectista/ing-dashboard.css" />
+    <title>Panel Principal - Ingeniero Proyectista</title>
+</head>
+<body>
+
+<header>
+    <h1>Nodex - Plataforma Logística</h1>
+    <p>Panel Principal del Ingeniero Proyectista</p>
+    <nav>
+        <a href="ing-dashboard.html">Panel principal</a> |
+        <a href="Cables/2.2_cables-listado.html">Cables</a> |
+        <a href="Calculos/2.7_calculos-listado.html">Cálculos de Metraje</a> |
+        <a href="Asignaciones/2.12_asignaciones-listado.html">Asignaciones Hardware</a> |
+        <a href="../../../auth/1.1_login.html">Cerrar sesión</a>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+    <h2>Bienvenida, Ana Josefina <small>(Ing. Proyectista)</small></h2>
+    
+    <section>
+        <h3>Accesos directos</h3>
+        <ul>
+            <li>&#128279; <a href="Cables/2.2_cables-listado.html">Gestión de Cables</a> <small>(RF-2.2)</small></li>
+            <li>&#128207; <a href="Calculos/2.7_calculos-listado.html">Historial de Cálculos</a> <small>(RF-2.7)</small></li>
+            <li>&#128187; <a href="Asignaciones/2.12_asignaciones-listado.html">Listado de Asignaciones</a> <small>(RF-2.12)</small></li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <section>
+        <h3>Indicadores Clave de Rendimiento (KPIs) <small>(RF-2.16)</small></h3>
+        <table border="1" cellpadding="6" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Métrica / Indicador</th>
+                    <th>Resultado Actual</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Categoría de cable más utilizada en el mes</strong></td>
+                    <td><strong>UTP Cat 6A</strong> (65% del total instalado)</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <br>
+
+    <section>
+        <h3>Tendencia de Metros de Cable Cotizados <small>(RF-2.17)</small></h3>
+        <figure style="max-width: 600px; margin: 10px 0;">
+            <canvas id="ing-graficaCable"></canvas>
+            <figcaption><br><strong>Figura 1.</strong> Comportamiento temporal de metros (Gráfica de Líneas).</figcaption>
+        </figure>
+    </section>
+
+    <br>
+
+    <section>
+        <h3>Exportación de Reportes Técnicos <small>(RF-2.18)</small></h3>
+        <form action="memoria-cableado.pdf" method="get" target="_blank">
+            <p>
+                <label for="proyecto_reporte">Seleccione el proyecto:</label><br>
+                <select id="proyecto_reporte" name="proyecto_reporte" required>
+                    <option value="1">Proyecto A - Edificio Central F</option>
+                    <option value="2">Proyecto B - Torre de Innovación</option>
+                </select>
+            </p>
+            <p>
+                <button type="submit">Generar Memoria de Cableado (PDF)</button>
+            </p>
+        </form>
+    </section>
+
+</main>
+
+<hr>
+<footer>
+    <p><a href="../../../auth/1.1_login.html"> Cerrar sesión y salir</a></p>
+    <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../js-ingproyectista/ing-grafica.js"></script>
+
+</body>
+</html>
