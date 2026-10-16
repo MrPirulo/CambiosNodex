@@ -1,9 +1,9 @@
-/* Estilo individual: superv-proyectos.css */
+/* Estilo base */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} 
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -15,11 +15,12 @@ body {
     min-height: 100vh;
 }
 
+/* Ocultar las líneas <hr> nativas para lograr un diseño más limpio */
 hr {
     display: none;
 }
 
-/* Header y Navegación */
+/* HEADER & NAVEGACIÓN (Estilo Barra Oscura) */
 header {
     background-color: #343a40;
     color: #ffffff;
@@ -34,6 +35,7 @@ header {
 header h1 {
     font-size: 1.25rem;
     font-weight: 600;
+    margin: 0;
     color: #ffffff;
 }
 
@@ -43,10 +45,10 @@ header p {
 
 header nav {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    gap: 1.2rem;
-    font-size: 0.9rem;
+    gap: 0.8rem;
+    font-size: 0.85rem;
+    flex-wrap: wrap;
 }
 
 header nav a {
@@ -59,7 +61,9 @@ header nav a:hover {
     color: #ffffff;
 }
 
-header nav a[href="../../index.html"] {
+/* Botón de Cerrar Sesión en la navegación */
+header nav a[href*="index.html"],
+header nav a[href*="login.html"] {
     background-color: transparent;
     border: 1px solid #28a745;
     color: #28a745;
@@ -68,12 +72,13 @@ header nav a[href="../../index.html"] {
     font-weight: 500;
 }
 
-header nav a[href="../../index.html"]:hover {
+header nav a[href*="index.html"]:hover,
+header nav a[href*="login.html"]:hover {
     background-color: #28a745;
     color: #ffffff;
 }
 
-/* Contenedor Principal */
+/* CONTENIDO PRINCIPAL (MAIN) */
 main {
     max-width: 1200px;
     width: 90%;
@@ -88,13 +93,19 @@ main > h2 {
     margin-bottom: 0.2rem;
 }
 
+main > h2 small {
+    font-size: 1rem;
+    color: #6c757d;
+    font-weight: 400;
+}
+
 main > p {
     color: #6c757d;
     font-size: 0.95rem;
     margin-bottom: 1.8rem;
 }
 
-/* Secciones RF-16 y RF-17 */
+/* SECCIONES & TARJETAS (CARDS) */
 section {
     background: #ffffff;
     border: 1px solid #e2e8f0;
@@ -114,78 +125,64 @@ section h3 {
 section > p {
     color: #6c757d;
     font-size: 0.9rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
 }
 
-/* Formulario de Alta y Filtro de Proyectos */
+/* FORMULARIOS Y CAMPOS */
+form p {
+    margin-bottom: 1rem;
+}
+
 form label {
-    color: #54595e;
-    font-size: 0.95rem;
-    font-weight: 500;
-    margin-right: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #495057;
+    display: inline-block;
+    margin-bottom: 0.3rem;
 }
 
 form input[type="text"],
-form input[type="date"],
-form input[type="file"] {
-    font-family: inherit;
-    font-size: 14px;
-    color: #2d3748;
-    background-color: #f8fafc;
-    border: 1px solid #cbd5e0;
-    border-radius: 6px;
-    padding: 8px 12px;
-    outline: none;
-    margin-top: 4px;
-    margin-right: 10px;
-    transition: all 0.2s ease-in-out;
+form input[type="file"],
+form select,
+form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.6rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    color: #495057;
+    background-color: #fff;
 }
 
-form input[type="text"]:focus,
-form input[type="date"]:focus {
-    border-color: #3182ce;
-    background-color: #ffffff;
-    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.25);
+form textarea {
+    resize: vertical;
 }
 
-form button[type="submit"] {
-    background-color: transparent;
-    border: 1px solid #007bff;
-    color: #007bff;
-    padding: 8px 14px;
-    border-radius: 6px;
+form button[type="submit"],
+form button[type="button"],
+form a button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
     font-weight: 500;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
 }
 
 form button[type="submit"]:hover {
-    background-color: #007bff;
-    color: #ffffff;
+    background-color: #0056b3;
 }
 
-form button[type="reset"] {
-    background-color: transparent;
-    border: 1px solid #6c757d;
-    color: #6c757d;
-    padding: 8px 14px;
-    border-radius: 6px;
-    font-weight: 500;
-    cursor: pointer;
-    margin-left: 0.5rem;
-    transition: all 0.2s ease-in-out;
-}
-
-form button[type="reset"]:hover {
-    background-color: #6c757d;
-    color: #ffffff;
-}
-
-/* Tabla de Proyectos Activos */
+/* TABLAS */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 0.5rem;
+    margin-bottom: 1rem;
     background-color: #ffffff;
 }
 
@@ -214,18 +211,54 @@ tbody tr:hover {
     background-color: #f8f9fa;
 }
 
-td a {
+/* Enlaces dentro de secciones y tablas */
+section a {
     color: #007bff;
     text-decoration: none;
     font-weight: 500;
+    font-size: 0.9rem;
 }
 
-td a:hover {
-    color: #28a745;
+section a:hover {
     text-decoration: underline;
 }
 
-/* Footer */
+/* LISTA DE ACCESOS DIRECTOS */
+section ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    padding: 0;
+}
+
+section ul li {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    padding: 1rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+section ul li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+    background-color: #ffffff;
+}
+
+section ul li a {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+section ul li small {
+    display: block;
+    color: #6c757d;
+    margin-top: 0.25rem;
+    font-size: 0.8rem;
+}
+
+/* FOOTER */
 footer {
     background-color: #f1f3f5;
     border-top: 1px solid #e9ecef;
@@ -234,4 +267,30 @@ footer {
     margin-top: auto;
     font-size: 0.85rem;
     color: #6c757d;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+footer a:hover {
+    color: #343a40;
+    text-decoration: underline;
+}
+
+footer a[href*="index.html"],
+footer a[href*="login.html"] {
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid #28a745;
+    color: #28a745;
+    padding: 0.35rem 0.8rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+footer a[href*="index.html"]:hover,
+footer a[href*="login.html"]:hover {
+    background-color: #28a745;
+    color: #ffffff;
 }

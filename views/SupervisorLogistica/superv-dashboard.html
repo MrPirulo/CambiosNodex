@@ -2,79 +2,100 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Logística - NODEX</title>
-    <link rel="stylesheet" href="css-superv/superv-dashboard.css">
-    <!-- Librería base de Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="1_CSS/superv-dashboard.css">
+    <title>Panel Principal - Nodex (Supervisor de Logística)</title>
 </head>
 <body>
-    <header>
+
+<header>
+    <div class="header-brand">
+        <img src="../../public/img/logo.png" alt="Logotipo Nodex" class="logo">
+    </div>
+    <h1>NODEX</h1>
+    <!-- Checkbox Oculto para controlar el estado del Menú (Sin JS) -->
+    <input type="checkbox" id="menu-toggle-checkbox" class="menu-checkbox">
+
+    <!-- Botón Hamburguesa que activa el Checkbox -->
+    <label for="menu-toggle-checkbox" class="menu-toggle" aria-label="Abrir Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <!-- Menú Desplegable del Lado Derecho -->
+    <nav class="nav-drawer">
+        <div class="drawer-header">
+            <h3>Menú de Navegación</h3>
+            <!-- Botón de Cerrar (Cierra el Checkbox) -->
+            <label for="menu-toggle-checkbox" class="close-btn">&times;</label>
+        </div>
+        <ul class="drawer-menu">
+            <li><a href="superv-dashboard.html" class="active">Panel principal</a></li>
+            <li><a href="componestes/4.1_superv-registrar.html">Registrar Componente</a></li>
+            <li><a href="componestes/4.2_superv-catalogo.html">Catálogo Hardware</a></li>
+            <li><a href="suministros/4.5_superv-registrar.html">Registrar Suministro</a></li>
+            <li><a href="4.9_superv-kpi-promedioBobinas.html">KPI Bobinas</a></li>
+            <li><a href="4.10_superv-grafica.html">Gráfica Costos</a></li>
+            <li><a href="4.11_superv-formatoPDF.html">Formato PDF</a></li>
+            <li class="logout-item"><a href="../../index.html">Cerrar sesión</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sombra/Overlay al abrir (al hacer clic también cierra el menú) -->
+    <label for="menu-toggle-checkbox" class="drawer-overlay"></label>
+</header>
+
+<hr>
+
+<main>
+    <h2>Bienvenido, Carlos Jhovany <small>(Supervisor de Logística)</small></h2>
+    <p>Usuario: Carlos Jhovany Damian García &nbsp;|&nbsp; Rol: Supervisor de Logística</p>
+
+    <section>
+        <h3>Órdenes de Suministro y Algoritmo de Materiales <small>(RF-4.5 a RF-4.8)</small></h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID Orden</th>
+                    <th>Proyecto Asignado</th>
+                    <th>Algoritmo (Bobinas/Cajas)</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ORD-501</td>
+                    <td>Torre Corporativa Alfa</td>
+                    <td>Calculado (3 Bobinas / 5 Cajas)</td>
+                    <td>Aprobada para Compra</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3>Distribución de Costos (Cable vs Hardware) <small>(RF-4.10)</small></h3>
         <figure>
-            <img src="../../public/img/logo.png" alt="Logo NODEX" width="150">
+            <img src="../../public/img/graficaDona.png" alt="Gráfica de Dona" width="400">
+            <figcaption>Figura. Distribución porcentual de los costos de Cable vs Hardware.</figcaption>
         </figure>
-        <h1>Nodex - Plataforma Logística</h1>
-        <p>Panel del Supervisor de Logística</p>
-        <nav>
-            <a href="superv-index.html">Inicio (Panel)</a> |
-            <a href="superv-dashboard.html">Dashboard Directivo</a> |
-            <a href="superv-proyectos.html">Proyectos</a> |
-            <a href="superv-areas.html">Áreas</a> |
-            <a href="superv-presupuestos.html">Presupuestos</a> |
-            <a href="superv-ordenes-compra.html">Órdenes de Compra</a> |
-            <a href="../../index.html">Volver al Menú Principal</a>
-        </nav>
-    </header>
-    <hr>
-    
-    <main>
-        <h2>Tablero Directivo - Logística</h2>
-        <p>Consulta de indicadores clave de rendimiento (KPI) y análisis comparativo de costos por área arquitectónica.</p>
+    </section>
 
-        <!-- RF-4.6: KPI Promedio Nodos -->
-        <section id="kpi-nodos">
-            <h3>Indicadores Clave de Rendimiento - KPI (RF-4.6)</h3>
-            <p><strong>RF-4.6:</strong> El usuario podrá consultar en el tablero directivo el KPI del promedio general de nodos instalados por habitación o área.</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Indicador Operativo</th>
-                        <th>Resultado Actual</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>Promedio General de Nodos (Por Habitación/Área)</th>
-                        <td><strong>14 Nodos / Área</strong></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+    <section>
+        <h3>Exportación de Documentos Oficiales</h3>
+        <ul>
+            <li>
+                <a href="4.11_superv-formatoPDF.html">Exportar Orden de Compra y Lista de Materiales (BOM) <small>(RF-4.11)</small></a>
+            </li>
+        </ul>
+    </section>
+    <p><a href="../../index.html"> Cerrar sesión y salir</a></p>
+</main>
 
-        <hr>
+<hr>
+<footer>
+    <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>
+</footer>
 
-        <!-- RF-4.7: Gráfica Comparativa de Costo Total -->
-        <section id="analisis-financiero">
-            <h3>Comparativa de Costo Total por Área Arquitectónica (RF-4.7)</h3>
-            <p><strong>RF-4.7:</strong> El sistema debe graficar (Barras) la comparativa de costo total por cada área arquitectónica.</p>
-            
-            <!-- Contenedor del Canvas donde se dibuja Chart.js -->
-            <div class="chart-container">
-                <canvas id="graficaCostosAreas"></canvas>
-            </div>
-            
-            <p>
-                <a href="superv-dashboard.html">Actualizar Gráficas</a>
-            </p>
-        </section>
-    </main>
-
-    <hr>
-    <footer>
-        <p><small>NODEX &mdash; Módulo de Supervisión Logística a cargo de Carlos Jhovany Damian Garcia &mdash; AEB-1055 Programación Web</small></p>
-    </footer>
-
-    <!-- Enlace a tu script dentro de la carpeta js-superv -->
-    <script src="js-superv/superv-grafica.js"></script>
 </body>
 </html>

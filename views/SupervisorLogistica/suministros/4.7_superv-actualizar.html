@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+        <link rel="stylesheet" href="../1_CSS/superv-form.css">
+    <title>Actualizar Suministro - Nodex</title>
+</head>
+<body>
+
+<header>
+    <h1>Nodex - Plataforma Logística</h1>
+    <p>Actualización de Suministro (Supervisor de Logística)</p>
+    <nav>
+        <a href="../superv-dashboard.html">Panel principal</a> |
+        <a href="4.6_superv-consultar.html">Consultar Suministros</a> |
+        <a href="../../index.html">Cerrar sesión</a>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+    <h2>Agregar Notas o Actualizar el Estado de Entrega <small>(RF-4.7)</small></h2>
+    <form action="#" method="POST">
+        <p>
+            <label for="id_orden">ID de Orden:</label><br>
+            <input type="text" id="id_orden" name="id_orden" value="ORD-501" readonly style="background-color: #e9ecef;">
+        </p>
+        <p>
+            <label for="estado_entrega">Actualizar Estado de Entrega:</label><br>
+            <select id="estado_entrega" name="estado_entrega">
+                <option>En Proceso de Surtido</option>
+                <option selected>Entregado a Cuadrilla</option>
+                <option>Retenido en Bodega</option>
+            </select>
+        </p>
+        <p>
+            <label for="notas_adicionales">Agregar Notas o Comentarios de Obra:</label><br>
+            <textarea id="notas_adicionales" name="notas_adicionales" rows="4" required>Se entregaron las bobinas y cajas en la caseta principal sin incidencias.</textarea>
+        </p>
+        <p>
+            <button type="submit">Guardar Cambios de Suministro</button>
+            <a href="4.6_superv-consultar.html"><button type="button">Cancelar</button></a>
+        </p>
+    </form>
+</main>
+
+<hr>
+<footer>
+    <p><a href="4.6_superv-consultar.html">&larr; Volver a Consultas</a></p>
+    <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>
+</footer>
+
+</body>
+</html>

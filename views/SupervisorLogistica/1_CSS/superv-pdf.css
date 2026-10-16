@@ -1,0 +1,180 @@
+/* ==========================================================================
+   ESTILOS GENERALES Y PALETA DE COLORES (Inspirado en Nodex)
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    color: #333333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   ENCABEZADO Y NAVEGACIÓN (Barra Oscura Superior)
+   ========================================================================== */
+header {
+    background-color: #212529; /* Tono oscuro de la interfaz */
+    color: #ffffff;
+    padding: 15px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+    height: 35px;
+    width: auto;
+    object-fit: contain;
+}
+
+header h1 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    margin-right: 20px;
+}
+
+header p {
+    display: none; /* Ocultamos el subtítulo secundario para limpiar la barra superior igual que la imagen */
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header nav a {
+    color: #adb5bd;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+header nav a:hover {
+    color: #ffffff;
+}
+
+/* Botón especial de Cerrar sesión con borde verde */
+header nav a[href*="index.html"],
+header nav a:last-child {
+    border: 1px solid #28a745;
+    color: #28a745;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+header nav a[href*="index.html"]:hover,
+header nav a:last-child:hover {
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+hr {
+    border: none;
+    height: 0;
+}
+
+/* ==========================================================================
+   CONTENIDO PRINCIPAL (<main>)
+   ========================================================================== */
+main {
+    max-width: 1000px;
+    width: 92%;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    flex: 1;
+}
+
+main h2 {
+    font-size: 1.8rem;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+main h2 small {
+    font-size: 1rem;
+    color: #6c757d;
+    font-weight: 400;
+}
+
+main > p {
+    color: #6c757d;
+    margin-bottom: 25px;
+    font-size: 1.05rem;
+}
+
+/* Estilo para el botón de Descarga (Idéntico a la referencia) */
+main p a[target="_blank"] {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #ffffff;
+    color: #0066cc;
+    border: 1.5px solid #0066cc;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 102, 204, 0.05);
+}
+
+main p a[target="_blank"]:hover {
+    background-color: #0066cc;
+    color: #ffffff;
+}
+
+/* Visor PDF incrustado */
+embed {
+    width: 100%;
+    height: 600px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    background-color: #f8f9fa;
+}
+
+/* Enlace de regreso al panel principal */
+main > p:last-of-type a {
+    color: #495057;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+main > p:last-of-type a:hover {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   PIE DE PÁGINA (<footer>)
+   ========================================================================== */
+footer {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-size: 0.9rem;
+    border-top: 1px solid #e9ecef;
+}

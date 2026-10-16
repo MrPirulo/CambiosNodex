@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+        <link rel="stylesheet" href="../1_CSS/superv-form.css">
+    <title>Actualizar Hardware - Nodex</title>
+</head>
+<body>
+
+<header>
+    <h1>Nodex - Plataforma Logística</h1>
+    <p>Actualización de Hardware (Supervisor de Logística)</p>
+    <nav>
+        <a href="../superv-dashboard.html">Panel principal</a> |
+        <a href="4.2_superv-catalogo.html">Catálogo</a> |
+        <a href="../../index.html">Cerrar sesión</a>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+    <h2>Actualizar Precio Unitario y Características <small>(RF-4.3)</small></h2>
+    <form action="#" method="POST" enctype="multipart/form-data">
+        <p>
+            <label for="nombre_componente">Nombre del Componente:</label><br>
+            <input type="text" id="nombre_componente" name="nombre_componente" value="Jack RJ45 Cat 6 - Panduit" required>
+        </p>
+        <p>
+            <label for="precio_unitario">Precio Unitario ($ MXN):</label><br>
+            <input type="text" id="precio_unitario" name="precio_unitario" value="$45.00" required>
+        </p>
+        <p>
+            <label for="imagen_hardware">Actualizar Fotografía:</label><br>
+            <input type="file" id="imagen_hardware" name="imagen_hardware">
+        </p>
+        <p>
+            <button type="submit">Guardar Cambios</button>
+            <a href="4.2_superv-catalogo.html"><button type="button">Cancelar</button></a>
+        </p>
+    </form>
+</main>
+
+<hr>
+<footer>
+    <p><a href="4.2_superv-catalogo.html">&larr; Volver al Catálogo</a></p>
+    <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>
+</footer>
+
+</body>
+</html>

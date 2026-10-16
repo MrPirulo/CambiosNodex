@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+        <link rel="stylesheet" href="../1_CSS/superv-form.css">
+    <title>Cancelar Suministro - Nodex</title>
+</head>
+<body>
+
+<header>
+    <h1>Nodex - Plataforma Logística</h1>
+    <p>Baja Lógica de Suministro (Supervisor de Logística)</p>
+    <nav>
+        <a href="../superv-dashboard.html">Panel principal</a> |
+        <a href="4.6_superv-consultar.html">Consultar Suministros</a> |
+        <a href="../../index.html">Cerrar sesión</a>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+    <h2>Cancelar (Baja Lógica) Orden de Suministro No Aprobada <small>(RF-4.8)</small></h2>
+    <p style="color: red; font-weight: bold;">¿Está seguro que desea cancelar esta orden de suministro?</p>
+    <ul>
+        <li><strong>ID Orden:</strong> ORD-501</li>
+        <li><strong>Proyecto:</strong> Torre Corporativa Alfa</li>
+    </ul>
+    <form action="#" method="POST">
+        <p>
+            <label for="motivo_cancelacion">Motivo de cancelación:</label><br>
+            <input type="text" id="motivo_cancelacion" name="motivo_cancelacion" required placeholder="Ej. Modificación en requerimientos de cableado" style="width: 350px;">
+        </p>
+        <p>
+            <button type="submit" style="background-color: #ffcccc; color: red; font-weight: bold;">Confirmar Cancelación (Baja Lógica)</button>
+            <a href="4.6_superv-consultar.html"><button type="button">Regresar</button></a>
+        </p>
+    </form>
+</main>
+
+<hr>
+<footer>
+    <p><a href="4.6_superv-consultar.html">&larr; Volver a Consultas</a></p>
+    <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>
+</footer>
+
+</body>
+</html>

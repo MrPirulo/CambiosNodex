@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+        <link rel="stylesheet" href="../1_CSS/superv-form.css">
+    <title>Registrar Suministro - Nodex</title>
+</head>
+<body>
+
+<header>
+    <h1>Nodex - Plataforma Logística</h1>
+    <p>Algoritmo de Suministro (Supervisor de Logística)</p>
+    <nav>
+        <a href="../superv-dashboard.html">Panel principal</a> |
+        <a href="4.5_superv-registrar.html">Registrar Suministro</a> |
+        <a href="4.6_superv-consultar.html">Consultar Suministros</a> |
+        <a href="../../index.html">Cerrar sesión</a>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+    <h2>Registrar Orden de Suministro con Algoritmo de Bobinas y Cajas <small>(RF-4.5)</small></h2>
+    <form action="#" method="POST">
+        <p>
+            <label for="id_orden">ID de Orden de Suministro:</label><br>
+            <input type="text" id="id_orden" name="id_orden" value="ORD-502" readonly style="background-color: #e9ecef;">
+        </p>
+        <p>
+            <label for="proyecto_obra">Proyecto / Obra Asignada:</label><br>
+            <select id="proyecto_obra" name="proyecto_obra">
+                <option>Torre Corporativa Alfa</option>
+                <option>Laboratorio de Redes</option>
+            </select>
+        </p>
+        <p>
+            <label for="metraje_total">Metraje Total Requerido por Proyectista (m):</label><br>
+            <input type="text" id="metraje_total" name="metraje_total" placeholder="Ej. 750 metros" required>
+        </p>
+        <p>
+            <label for="algoritmo_resultado">Resultado del Algoritmo (Bobinas enteras de 305m y Cajas cerradas):</label><br>
+            <input type="text" id="algoritmo_resultado" name="algoritmo_resultado" value="3 Bobinas enteras (915m) + 2 Cajas de Jacks" readonly style="background-color: #e9ecef; width: 350px;">
+        </p>
+        <p>
+            <label for="notas_suministro">Notas Iniciales para la Cuadrilla:</label><br>
+            <textarea id="notas_suministro" name="notas_suministro" rows="3" placeholder="Suministro calculado para entrega inmediata en sitio."></textarea>
+        </p>
+        <p>
+            <button type="submit">Ejecutar Algoritmo y Guardar Orden</button>
+            <a href="4.6_superv-consultar.html"><button type="button">Ver Transacciones Finales</button></a>
+        </p>
+    </form>
+</main>
+
+<hr>
+<footer>
+    <p><a href="../superv-dashboard.html">&larr; Volver al Panel Principal</a></p>
+    <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>
+</footer>
+
+</body>
+</html>
