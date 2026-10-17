@@ -2,49 +2,91 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Catálogo de Áreas - Nodex (Gerente)</title>
+    <title>Catálogo de Áreas - Nodex</title>
     <link rel="stylesheet" href="css-gteproyectos/gte-dashboard.css">
 </head>
 <body>
 
 <header>
     <h1>Nodex - Plataforma Logística</h1>
-    <p>Catálogo de Áreas Arquitectónicas (Gerente de Proyectos)</p>
+    <p>Catálogo de Áreas y Habitaciones (Gerente de Proyectos)</p>
     <nav>
         <a href="../3_gte-dashboard.html">Panel principal</a> |
         <a href="3.1_gte-registrarArea.html">Registrar Área</a> |
-        <a href="3.2_gte-catalago.html">Catálogo</a> |
-        <a href="../../../auth/1.1_login.html">Cerrar sesión</a>
+        <a href="3.2_gte-catalago.html">Catálogo Áreas</a> |
+        <a href="3.3_gte-ActualizarCroquis.html">Actualizar Área</a> |
+        <a href="3.4_gte-eliminar.html">Eliminar Área</a> |
+        <a href="../RegistroCierre/3.5_gte-registrarCierre.html">Registrar Cierre</a> |
+        <a href="../RegistroCierre/3.6_gte-consultarCierre.html">Consultar Cierres</a> |
+        <a href="../RegistroCierre/3.7_gte-ActualizarPresupuesto.html">Actualizar Cierre</a> |
+        <a href="../RegistroCierre/3.8_gte-eliminarPresupuesto.html">Cancelar Cierre</a> |
+        <a href="../3.9_gte-kpi_promedioNodos.html">KPI Nodos</a> |
+        <a href="../3.10_gte-grafica.html">Gráfica Costos</a> |
+        <a href="../3.11_gte-formatoPDF.html">Exportar PDF</a> |
+        <a href="../../../index.html">Cerrar sesión</a>
     </nav>
 </header>
 
 <hr>
 
 <main>
-    <h2>Catálogo de Áreas y Habitaciones por Proyecto <small>(RF-3.2)</small></h2>
-    <p><a href="3.1_gte-registrarArea.html">+ Registrar Nueva Área Arquitectónica</a></p>
-    
+    <h2>Catálogo de Áreas por Proyecto <small>(RF-3.2)</small></h2>
+
+    <section>
+        <label for="filtro_proyecto">Filtrar por Proyecto:</label>
+        <select id="filtro_proyecto" name="filtro_proyecto">
+            <option value="todos">-- Todos los proyectos --</option>
+            <option value="1">Edificio Corporativo A</option>
+            <option value="2">Laboratorio de Redes</option>
+        </select>
+        <button type="button">Buscar</button>
+    </section>
+
+    <br>
+
     <section>
         <table border="1" cellpadding="6" cellspacing="0">
             <thead>
                 <tr>
-                    <th>ID Área</th>
+                    <th>ID Area</th>
                     <th>Proyecto</th>
-                    <th>Nombre Habitación</th>
-                    <th>Medidas</th>
-                    <th>Croquis</th>
+                    <th>Nombre de Habitación/Área</th>
+                    <th>Medidas (m²)</th>
+                    <th>Croquis / Plano</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>ARQ-001</td>
-                    <td>Torre Corporativa Alfa</td>
-                    <td>Centro de Datos A1</td>
-                    <td>12x8 m</td>
-                    <td><a href="../../../public/img/grafica-usuarios.png" target="_blank">Ver Croquis</a></td>
+                    <td>AR-001</td>
+                    <td>Edificio Corporativo A</td>
+                    <td>Oficina Principal A-12</td>
+                    <td>35.00 m²</td>
+                    <td><a href="../../public/img/croquis1.png" target="_blank">Ver Croquis</a></td>
                     <td>
-                        <a href="3.3_gte-ActualizarCroquis.html">Actualizar</a> | 
+                        <a href="3.3_gte-ActualizarCroquis.html">Editar</a> |
+                        <a href="3.4_gte-eliminar.html">Eliminar</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>AR-002</td>
+                    <td>Edificio Corporativo A</td>
+                    <td>Cuarto de Telecomunicaciones (MDF)</td>
+                    <td>18.50 m²</td>
+                    <td><a href="../../public/img/croquis2.png" target="_blank">Ver Croquis</a></td>
+                    <td>
+                        <a href="3.3_gte-ActualizarCroquis.html">Editar</a> |
+                        <a href="3.4_gte-eliminar.html">Eliminar</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>AR-003</td>
+                    <td>Laboratorio de Redes</td>
+                    <td>Laboratorio CISCO 1</td>
+                    <td>60.00 m²</td>
+                    <td><a href="../../public/img/croquis3.png" target="_blank">Ver Croquis</a></td>
+                    <td>
+                        <a href="3.3_gte-ActualizarCroquis.html">Editar</a> |
                         <a href="3.4_gte-eliminar.html">Eliminar</a>
                     </td>
                 </tr>
@@ -54,8 +96,9 @@
 </main>
 
 <hr>
+
 <footer>
-    <p><a href="../3_gte-dashboard.html">&larr; Volver al Panel Principal</a></p>
+    <p><a href="3_gte-dashboard.html">&larr; Volver al Panel Principal</a></p>
     <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>
 </footer>
 

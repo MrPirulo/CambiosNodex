@@ -2,42 +2,79 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>KPI Promedio de Nodos - Nodex (Gerente)</title>
-    <link rel="stylesheet" href="CSS/gte-dashboard.">
+    <title>KPI Promedio Nodos - Nodex</title>
+    <link rel="stylesheet" href="css-gteproyectos/gte-dashboard.css">
 </head>
 <body>
 
 <header>
     <h1>Nodex - Plataforma Logística</h1>
-    <p>Indicadores Clave (Gerente de Proyectos)</p>
+    <p>Indicador KPI (Gerente de Proyectos)</p>
     <nav>
         <a href="3_gte-dashboard.html">Panel principal</a> |
+        <a href="3.1_gte-registrarArea.html">Registrar Área</a> |
+        <a href="3.2_gte-catalago.html">Catálogo Áreas</a> |
+        <a href="3.3_gte-ActualizarCroquis.html">Actualizar Área</a> |
+        <a href="3.4_gte-eliminar.html">Eliminar Área</a> |
+        <a href="3.5_gte-registrarCierre.html">Registrar Cierre</a> |
+        <a href="3.6_gte-consultarCierre.html">Consultar Cierres</a> |
+        <a href="3.7_gte-ActualizarPresupuesto.html">Actualizar Cierre</a> |
+        <a href="3.8_gte-eliminarPresupuesto.html">Cancelar Cierre</a> |
         <a href="3.9_gte-kpi_promedioNodos.html">KPI Nodos</a> |
         <a href="3.10_gte-grafica.html">Gráfica Costos</a> |
-        <a href="3.11_gte-formatoPDF.html">Formato PDF</a> |
-        <a href="../../auth/login.html">Cerrar sesión</a>
+        <a href="3.11_gte-formatoPDF.html">Exportar PDF</a> |
+        <a href="../../index.html">Cerrar sesión</a>
     </nav>
 </header>
 
 <hr>
 
 <main>
-    <h2>KPI - Promedio General de Nodos Instalados por Habitación <small>(RF-3.9)</small></h2>
-    <section style="text-align: center; margin: 30px 0;">
-        <h1 style="font-size: 64px; color: #0056b3; margin: 0;">14.8</h1>
-        <p style="font-size: 18px; color: #555;">Nodos promedio calculados por cada área arquitectónica activa en los proyectos.</p>
-    </section>
+    <h2>KPI: Promedio General de Nodos Instalados por Habitación <small>(RF-3.9)</small></h2>
 
     <section>
-        <p>Acciones rápidas:</p>
-        <ul>
-            <li><a href="3.10_gte-grafica.html">Ver Gráfica de Distribución de Costos <small>(RF-3.10)</small></a></li>
-            <li><a href="3.11_gte-formatoPDF.html">Ir a Exportación de Cotización en PDF <small>(RF-3.11)</small></a></li>
-        </ul>
+        <fieldset>
+            <legend>Resumen KPI - Métricas de Instalación</legend>
+            <p><strong>Total de Nodos Instalados:</strong> 128 Nodos</p>
+            <p><strong>Total de Habitaciones / Áreas:</strong> 16 Habitaciones</p>
+            <hr>
+            <h3>Promedio General: <mark>8 Nodos / Habitación</mark></h3>
+        </fieldset>
+    </section>
+
+    <br>
+
+    <section>
+        <h3>Desglose por Proyecto</h3>
+        <table border="1" cellpadding="6" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Proyecto</th>
+                    <th>NodosTotales</th>
+                    <th>Habitaciones</th>
+                    <th>Promedio Nodos/Habitación</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Edificio Corporativo A</td>
+                    <td>80</td>
+                    <td>10</td>
+                    <td>8.0</td>
+                </tr>
+                <tr>
+                    <td>Laboratorio de Redes</td>
+                    <td>48</td>
+                    <td>6</td>
+                    <td>8.0</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
 </main>
 
 <hr>
+
 <footer>
     <p><a href="3_gte-dashboard.html">&larr; Volver al Panel Principal</a></p>
     <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>

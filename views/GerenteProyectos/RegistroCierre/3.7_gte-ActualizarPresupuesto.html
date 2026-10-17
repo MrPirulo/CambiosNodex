@@ -2,53 +2,73 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Actualizar Presupuesto - Nodex (Gerente)</title>
+    <title>Actualizar Presupuesto - Nodex</title>
     <link rel="stylesheet" href="css-gteproyectos/gte-dashboard.css">
 </head>
 <body>
 
 <header>
     <h1>Nodex - Plataforma Logística</h1>
-    <p>Actualización de Presupuesto (Gerente de Proyectos)</p>
+    <p>Actualizar Cierre de Presupuesto (Gerente de Proyectos)</p>
     <nav>
-        <a href="../3_gte-dashboard.html"           >Panel principal       </a> |
-        <a href="3.6_gte-consultarCierre.html"      >Transacciones         </a> |
-        <a href="3.7_gte-ActualizarPresupuesto.html">Actualizar Presupuesto</a> |
-        <a href="../../../auth/1.1_login.html"      >Cerrar sesión         </a>
+        <a href="../3_gte-dashboard.html">Panel principal</a> |
+        <a href="../RegistroArea/3.1_gte-registrarArea.html">Registrar Área</a> |
+        <a href="../RegistroArea/3.2_gte-catalago.html">Catálogo Áreas</a> |
+        <a href="../RegistroArea/3.3_gte-ActualizarCroquis.html">Actualizar Área</a> |
+        <a href="../RegistroArea/3.4_gte-eliminar.html">Eliminar Área</a> |
+        <a href="3.5_gte-registrarCierre.html">Registrar Cierre</a> |
+        <a href="3.6_gte-consultarCierre.html">Consultar Cierres</a> |
+        <a href="3.7_gte-ActualizarPresupuesto.html">Actualizar Cierre</a> |
+        <a href="3.8_gte-eliminarPresupuesto.html">Cancelar Cierre</a> |
+        <a href="../3.9_gte-kpi_promedioNodos.html">KPI Nodos</a> |
+        <a href="../3.10_gte-grafica.html">Gráfica Costos</a> |
+        <a href="../3.11_gte-formatoPDF.html">Exportar PDF</a> |
+        <a href="../../../index.html">Cerrar sesión</a>
     </nav>
 </header>
 
 <hr>
 
 <main>
-    <h2>Actualizar Observaciones y Datos en Cierre de Presupuesto <small>(RF-3.7)</small></h2>
+    <h2>Actualizar Observaciones de Cierre <small>(RF-3.7)</small></h2>
+
     <form action="#" method="POST">
         <p>
-            <label for="id_cierre">ID de Cierre:</label><br>
-            <input type="text" id="id_cierre" name="id_cierre" value="CIER-102" readonly style="background-color: #e9ecef;">
+            <label for="folio_cierre">Folio de Cierre:</label><br>
+            <input type="text" id="folio_cierre" name="folio_cierre" value="CRS-2026-01" readonly>
         </p>
+
         <p>
-            <label for="area_info">Área / Habitación Asociada:</label><br>
-            <input type="text" id="area_info" name="area_info" value="Torre Corporativa Alfa - Centro de Datos A1" readonly style="background-color: #e9ecef; width: 350px;">
+            <label for="proyecto">Proyecto:</label><br>
+            <input type="text" id="proyecto" name="proyecto" value="Edificio Corporativo A" readonly>
         </p>
+
         <p>
-            <label for="nuevo_costo">Actualizar Costo Total Consolidado (MXN):</label><br>
-            <input type="text" id="nuevo_costo" name="nuevo_costo" value="$57,200.00" required>
+            <label for="habitacion">Habitación:</label><br>
+            <input type="text" id="habitacion" name="habitacion" value="Oficina Principal A-12" readonly>
         </p>
+
         <p>
-            <label for="nuevas_observaciones">Nuevas Observaciones o Notas de Auditoría:</label><br>
-            <textarea id="nuevas_observaciones" name="nuevas_observaciones" rows="4" cols="50" required>Se ajustan los costos debido a recertificación de nodos adicionales solicitados por el cliente.</textarea>
+            <label for="monto">Costo Congelado Total ($):</label><br>
+            <input type="text" id="monto" name="monto" value="$30,800.00" readonly>
         </p>
+
         <p>
-            <button type="submit">Guardar Cambios y Observaciones</button>
-            <a href="3.6_gte-consultarCierre.html"><button type="button">Cancelar</button></a>
+            <label for="observaciones">Editar Observaciones:</label><br>
+            <textarea id="observaciones" name="observaciones" rows="4" cols="40" required>Aprobado por dirección financiera. Se autoriza anticipo del 50%.</textarea>
+        </p>
+
+        <p>
+            <button type="submit">Guardar Cambios</button>
+            <a href="3.6_gte-consultarCierre.html">Regresar al listado</a>
         </p>
     </form>
 </main>
 
 <hr>
+
 <footer>
-    <p><a href="3.6_gte-consultarCierre.html">&larr; Volver a Consultas</a></p>
+    <p><a href="3_gte-dashboard.html">&larr; Volver al Panel Principal</a></p>
     <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>
 </footer>
 

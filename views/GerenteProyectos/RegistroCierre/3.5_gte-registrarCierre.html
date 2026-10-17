@@ -2,65 +2,83 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Registrar Cierre - Nodex (Gerente)</title>
+    <title>Registrar Cierre de Presupuesto - Nodex</title>
     <link rel="stylesheet" href="css-gteproyectos/gte-dashboard.css">
 </head>
 <body>
 
 <header>
     <h1>Nodex - Plataforma Logística</h1>
-    <p>Cierre de Presupuesto (Gerente de Proyectos)</p>
+    <p>Registrar Cierre de Presupuesto (Gerente de Proyectos)</p>
     <nav>
-        <a href="../3_gte-dashboard.html"     >Panel principal  </a> |
-        <a href="3.5_gte-registrarCierre.html">Registrar Cierre </a> |
-        <a href="3.6_gte-consultarCierre.html">Transacciones    </a> |
-        <a href="../../../auth/1.1_login.html">Cerrar sesión    </a>
+        <a href="../3_gte-dashboard.html">Panel principal</a> |
+        <a href="../RegistroArea/3.1_gte-registrarArea.html">Registrar Área</a> |
+        <a href="../RegistroArea/3.2_gte-catalago.html">Catálogo Áreas</a> |
+        <a href="../RegistroArea/3.3_gte-ActualizarCroquis.html">Actualizar Área</a> |
+        <a href="../RegistroArea/3.4_gte-eliminar.html">Eliminar Área</a> |
+        <a href="3.5_gte-registrarCierre.html">Registrar Cierre</a> |
+        <a href="3.6_gte-consultarCierre.html">Consultar Cierres</a> |
+        <a href="3.7_gte-ActualizarPresupuesto.html">Actualizar Cierre</a> |
+        <a href="3.8_gte-eliminarPresupuesto.html">Cancelar Cierre</a> |
+        <a href="../3.9_gte-kpi_promedioNodos.html">KPI Nodos</a> |
+        <a href="../3.10_gte-grafica.html">Gráfica Costos</a> |
+        <a href="../3.11_gte-formatoPDF.html">Exportar PDF</a> |
+        <a href="../../../index.html">Cerrar sesión</a>
     </nav>
 </header>
 
 <hr>
 
 <main>
-    <h2>Registrar Cierre de Presupuesto por Habitación <small>(RF-3.5)</small></h2>
+    <h2>Cierre de Presupuesto por Habitación <small>(RF-3.5)</small></h2>
+
     <form action="#" method="POST">
         <p>
-            <label for="id_cierre">ID de Cierre Asignado:</label><br>
-            <input type="text" id="id_cierre" name="id_cierre" value="CIER-103" readonly style="background-color: #e9ecef;">
-        </p>
-        <p>
-            <label for="proyecto_area">Seleccionar Proyecto y Área Arquitectónica:</label><br>
-            <select id="proyecto_area" name="proyecto_area">
-                <option>Torre Corporativa Alfa - Centro de Datos A1</option>
-                <option>Torre Corporativa Alfa - Oficinas Piso 1</option>
-                <option>Laboratorio de Redes - Sala de Pruebas B2</option>
+            <label for="proyecto">Seleccionar Proyecto:</label><br>
+            <select id="proyecto" name="proyecto" required>
+                <option value="1">Edificio Corporativo A</option>
+                <option value="2">Laboratorio de Redes</option>
             </select>
         </p>
+
         <p>
-            <label for="costo_materiales">Costo Consolidado de Materiales (Cable + Hardware):</label><br>
-            <input type="text" id="costo_materiales" name="costo_materiales" placeholder="Ej. $45,200.00 MXN" required>
+            <label for="habitacion">Habitación / Área Arquitectónica:</label><br>
+            <select id="habitacion" name="habitacion" required>
+                <option value="AR-001">Oficina Principal A-12</option>
+                <option value="AR-002">Cuarto de Telecomunicaciones (MDF)</option>
+            </select>
         </p>
+
         <p>
-            <label for="costo_mano_obra">Costo Estimado de Mano Obra / Instalación:</label><br>
-            <input type="text" id="costo_mano_obra" name="costo_mano_obra" placeholder="Ej. $12,000.00 MXN" required>
+            <label for="monto_cable">Costo Calculado Cableado ($):</label><br>
+            <input type="text" id="monto_cable" name="monto_cable" value="$18,500.00" readonly>
         </p>
+
         <p>
-            <label for="responsable">Gerente Responsable de la Validación:</label><br>
-            <input type="text" id="responsable" name="responsable" value="Ricardo Avalos Vargas" readonly style="background-color: #e9ecef;">
+            <label for="monto_hardware">Costo Calculado Hardware ($):</label><br>
+            <input type="text" id="monto_hardware" name="monto_hardware" value="$12,300.00" readonly>
         </p>
+
         <p>
-            <label for="observaciones">Observaciones Financieras y Notas de Cierre:</label><br>
-            <textarea id="observaciones" name="observaciones" rows="4" cols="50" placeholder="Detallar condiciones del presupuesto congelado, desviaciones o acuerdos con el cliente."></textarea>
+            <label for="monto_total">Costo Consolidad Total ($):</label><br>
+            <input type="text" id="monto_total" name="monto_total" value="$30,800.00" readonly>
         </p>
+
         <p>
-            <button type="submit">Congelar y Cerrar Presupuesto</button>
-            <a href="3.6_gte-consultarCierre.html"><button type="button">Ver Transacciones Previas</button></a>
+            <label for="observaciones">Observaciones del Cierre:</label><br>
+            <textarea id="observaciones" name="observaciones" rows="3" cols="40" placeholder="Añadir notas sobre la aprobación financiera..."></textarea>
+        </p>
+
+        <p>
+            <button type="submit" onclick="return confirm('¿Desea congelar este presupuesto para la habitación seleccionada?');">Congelar y Registrar Cierre</button>
         </p>
     </form>
 </main>
 
 <hr>
+
 <footer>
-    <p><a href="../3_gte-dashboard.html">&larr; Volver al Panel Principal</a></p>
+    <p><a href="3_gte-dashboard.html">&larr; Volver al Panel Principal</a></p>
     <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>
 </footer>
 

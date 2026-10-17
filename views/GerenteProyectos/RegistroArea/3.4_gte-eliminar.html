@@ -2,19 +2,28 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Eliminar Área - Nodex (Gerente)</title>
+    <title>Eliminar Área - Nodex</title>
     <link rel="stylesheet" href="css-gteproyectos/gte-dashboard.css">
 </head>
 <body>
 
 <header>
     <h1>Nodex - Plataforma Logística</h1>
-    <p>Eliminación de Área (Gerente de Proyectos)</p>
+    <p>Eliminar Área Arquitectónica (Gerente de Proyectos)</p>
     <nav>
         <a href="../3_gte-dashboard.html">Panel principal</a> |
-        <a href="3.2_gte-catalago.html">Catálogo</a> |
+        <a href="3.1_gte-registrarArea.html">Registrar Área</a> |
+        <a href="3.2_gte-catalago.html">Catálogo Áreas</a> |
+        <a href="3.3_gte-ActualizarCroquis.html">Actualizar Área</a> |
         <a href="3.4_gte-eliminar.html">Eliminar Área</a> |
-        <a href="../../../auth/1.1_login.html">Cerrar sesión</a>
+        <a href="../RegistroCierre/3.5_gte-registrarCierre.html">Registrar Cierre</a> |
+        <a href="../RegistroCierre/3.6_gte-consultarCierre.html">Consultar Cierres</a> |
+        <a href="../RegistroCierre/3.7_gte-ActualizarPresupuesto.html">Actualizar Cierre</a> |
+        <a href="../RegistroCierre/3.8_gte-eliminarPresupuesto.html">Cancelar Cierre</a> |
+        <a href="../3.9_gte-kpi_promedioNodos.html">KPI Nodos</a> |
+        <a href="../3.10_gte-grafica.html">Gráfica Costos</a> |
+        <a href="../3.11_gte-formatoPDF.html">Exportar PDF</a> |
+        <a href="../../../index.html">Cerrar sesión</a>
     </nav>
 </header>
 
@@ -22,22 +31,38 @@
 
 <main>
     <h2>Eliminar Área Arquitectónica <small>(RF-3.4)</small></h2>
-    <p style="color: red; font-weight: bold;">¿Está seguro que desea eliminar esta área arquitectónica del catálogo?</p>
-    <ul>
-        <li><strong>Área:</strong> Centro de Datos A1</li>
-        <li><strong>Proyecto:</strong> Torre Corporativa Alfa</li>
-    </ul>
-    <form action="#" method="POST">
-        <p>
-            <button type="submit" style="background-color: #ffcccc; color: red; font-weight: bold;">Confirmar Eliminación</button>
-            <button type="submit" formaction="3.2_gte-catalago.html">Cancelar</button></a>
-        </p>
-    </form>
+
+    <section>
+        <p><strong>Atención:</strong> Esta acción eliminará el área seleccionada del catálogo general.</p>
+        
+        <form action="#" method="POST">
+            <p>
+                <label for="id_area">Seleccionar Área a Eliminar:</label><br>
+                <select id="id_area" name="id_area" required>
+                    <option value="">-- Seleccione un Área --</option>
+                    <option value="1">AR-001 - Oficina Principal A-12</option>
+                    <option value="2">AR-002 - Cuarto de Telecomunicaciones (MDF)</option>
+                    <option value="3">AR-003 - Laboratorio CISCO 1</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="motivo">Motivo de la baja:</label><br>
+                <textarea id="motivo" name="motivo" rows="3" cols="40" placeholder="Ingrese el motivo de eliminación..."></textarea>
+            </p>
+
+            <p>
+                <button type="submit" onclick="return confirm('¿Está seguro de eliminar esta área arquitectónica?');">Eliminar Área</button>
+                <a href="3.2_gte-catalago.html">Cancelar</a>
+            </p>
+        </form>
+    </section>
 </main>
 
 <hr>
+
 <footer>
-    <p><a href="3.2_gte-catalago.html">&larr; Volver al Catálogo</a></p>
+    <p><a href="3_gte-dashboard.html">&larr; Volver al Panel Principal</a></p>
     <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>
 </footer>
 

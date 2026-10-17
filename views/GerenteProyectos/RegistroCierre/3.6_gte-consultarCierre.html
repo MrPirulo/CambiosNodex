@@ -2,69 +2,75 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Consultar Cierres - Nodex (Gerente)</title>
+    <title>Consultar Cierres - Nodex</title>
     <link rel="stylesheet" href="css-gteproyectos/gte-dashboard.css">
 </head>
 <body>
 
 <header>
     <h1>Nodex - Plataforma Logística</h1>
-    <p>Consulta de Cierres (Gerente de Proyectos)</p>
+    <p>Historial de Cierres de Presupuesto (Gerente de Proyectos)</p>
     <nav>
-        <a href="../3_gte-dashboard.html"     >Panel principal  </a> |
-        <a href="3.5_gte-registrarCierre.html">Registrar Cierre </a> |
-        <a href="3.6_gte-consultarCierre.html">Transacciones    </a> |
-        <a href="../../../auth/1.1_login.html">Cerrar sesión    </a>
+        <a href="../3_gte-dashboard.html">Panel principal</a> |
+        <a href="../RegistroArea/3.1_gte-registrarArea.html">Registrar Área</a> |
+        <a href="../RegistroArea/3.2_gte-catalago.html">Catálogo Áreas</a> |
+        <a href="../RegistroArea/3.3_gte-ActualizarCroquis.html">Actualizar Área</a> |
+        <a href="../RegistroArea/3.4_gte-eliminar.html">Eliminar Área</a> |
+        <a href="3.5_gte-registrarCierre.html">Registrar Cierre</a> |
+        <a href="3.6_gte-consultarCierre.html">Consultar Cierres</a> |
+        <a href="3.7_gte-ActualizarPresupuesto.html">Actualizar Cierre</a> |
+        <a href="3.8_gte-eliminarPresupuesto.html">Cancelar Cierre</a> |
+        <a href="../3.9_gte-kpi_promedioNodos.html">KPI Nodos</a> |
+        <a href="../3.10_gte-grafica.html">Gráfica Costos</a> |
+        <a href="../3.11_gte-formatoPDF.html">Exportar PDF</a> |
+        <a href="../../../index.html">Cerrar sesión</a>
     </nav>
 </header>
 
 <hr>
 
 <main>
-    <h2>Transacciones de Cierres de Presupuestos <small>(RF-3.6)</small></h2>
-    <p><a href="3.5_gte-registrarCierre.html">+ Registrar Nuevo Cierre de Presupuesto</a></p>
-    
+    <h2>Transacciones de Cierres de Presupuesto <small>(RF-3.6)</small></h2>
+
     <section>
         <table border="1" cellpadding="6" cellspacing="0">
             <thead>
                 <tr>
-                    <th>ID Cierre</th>
-                    <th>Proyecto / Área</th>
-                    <th>Costo Materiales</th>
-                    <th>Mano de Obra</th>
-                    <th>Costo Total</th>
+                    <th>Folio Cierre</th>
+                    <th>Fecha Cierre</th>
+                    <th>Proyecto</th>
+                    <th>Habitación / Área</th>
+                    <th>Costo Consolidado</th>
                     <th>Estado</th>
-                    <th>Responsable</th>
                     <th>Observaciones</th>
-                    <th>Gestión</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>CIER-102</td>
-                    <td>Torre Corporativa Alfa - Centro de Datos A1</td>
-                    <td>$45,200.00</td>
-                    <td>$12,000.00</td>
-                    <td>$57,200.00 MXN</td>
-                    <td>Congelado / Cerrado</td>
-                    <td>Ricardo Avalos</td>
-                    <td>Validado sin desviaciones mayores.</td>
+                    <td>CRS-2026-01</td>
+                    <td>2026-08-15</td>
+                    <td>Edificio Corporativo A</td>
+                    <td>Oficina Principal A-12</td>
+                    <td>$30,800.00</td>
+                    <td>Congelado / Aprobado</td>
+                    <td>Aprobado por dirección financiera.</td>
                     <td>
-                        <a href="3.7_gte-ActualizarPresupuesto.html">Editar Obs.</a> | 
+                        <a href="3.7_gte-ActualizarPresupuesto.html">Modificar Notas</a> |
                         <a href="3.8_gte-eliminarPresupuesto.html">Invalidar</a>
                     </td>
                 </tr>
                 <tr>
-                    <td>CIER-101</td>
-                    <td>Laboratorio de Redes - Sala B2</td>
-                    <td>$28,500.00</td>
-                    <td>$8,000.00</td>
-                    <td>$36,500.00 MXN</td>
-                    <td>Invalidado (Baja lógica)</td>
-                    <td>Ricardo Avalos</td>
-                    <td>Cancelado por cambio de planos.</td>
+                    <td>CRS-2026-02</td>
+                    <td>2026-08-20</td>
+                    <td>Laboratorio de Redes</td>
+                    <td>Laboratorio CISCO 1</td>
+                    <td>$45,200.00</td>
+                    <td>Congelado / Aprobado</td>
+                    <td>Sin observaciones.</td>
                     <td>
-                        <a href="3.7_gte-ActualizarPresupuesto.html">Ver Detalle</a>
+                        <a href="3.7_gte-ActualizarPresupuesto.html">Modificar Notas</a> |
+                        <a href="3.8_gte-eliminarPresupuesto.html">Invalidar</a>
                     </td>
                 </tr>
             </tbody>
@@ -73,8 +79,9 @@
 </main>
 
 <hr>
+
 <footer>
-    <p><a href="../3_gte-dashboard.html">&larr; Volver al Panel Principal</a></p>
+    <p><a href="3_gte-dashboard.html">&larr; Volver al Panel Principal</a></p>
     <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>
 </footer>
 

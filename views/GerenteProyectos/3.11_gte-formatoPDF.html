@@ -2,66 +2,70 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Formato PDF - Nodex (Gerente)</title>
+    <title>Exportar Cotización PDF - Nodex</title>
     <link rel="stylesheet" href="css-gteproyectos/gte-dashboard.css">
 </head>
 <body>
 
 <header>
     <h1>Nodex - Plataforma Logística</h1>
-    <p>Exportación de Reporte (Gerente de Proyectos)</p>
+    <p>Exportar Reportes en PDF (Gerente de Proyectos)</p>
     <nav>
         <a href="3_gte-dashboard.html">Panel principal</a> |
+        <a href="3.1_gte-registrarArea.html">Registrar Área</a> |
+        <a href="3.2_gte-catalago.html">Catálogo Áreas</a> |
+        <a href="3.3_gte-ActualizarCroquis.html">Actualizar Área</a> |
+        <a href="3.4_gte-eliminar.html">Eliminar Área</a> |
+        <a href="3.5_gte-registrarCierre.html">Registrar Cierre</a> |
+        <a href="3.6_gte-consultarCierre.html">Consultar Cierres</a> |
+        <a href="3.7_gte-ActualizarPresupuesto.html">Actualizar Cierre</a> |
+        <a href="3.8_gte-eliminarPresupuesto.html">Cancelar Cierre</a> |
         <a href="3.9_gte-kpi_promedioNodos.html">KPI Nodos</a> |
         <a href="3.10_gte-grafica.html">Gráfica Costos</a> |
-        <a href="3.11_gte-formatoPDF.html">Formato PDF</a> |
-        <a href="../../auth/1.1_login.html">Cerrar sesión</a>
+        <a href="3.11_gte-formatoPDF.html">Exportar PDF</a> |
+        <a href="../../index.html">Cerrar sesión</a>
     </nav>
 </header>
 
 <hr>
 
 <main>
-    <h2>Exportar Cotización por Cuarto en PDF <small>(RF-3.11)</small></h2>
-    <p>Generación y descarga del documento oficial con el desglose del presupuesto financiero por zona.</p>
+    <h2>Exportación: Cotización por Cuarto <small>(RF-3.11)</small></h2>
 
     <section>
-        <h3>Vista Previa del Reporte Oficial</h3>
-        <table border="1" cellpadding="6" cellspacing="0">
-            <thead>
-                <tr>
-                    <th>Área / Habitación</th>
-                    <th>Cantidad Nodos</th>
-                    <th>Costo Materiales</th>
-                    <th>Subtotal</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Centro de Datos A1</td>
-                    <td>24</td>
-                    <td>$28,000.00</td>
-                    <td>$28,000.00</td>
-                </tr>
-                <tr>
-                    <td>Oficinas Administrativas Piso 1</td>
-                    <td>16</td>
-                    <td>$17,200.00</td>
-                    <td>$17,200.00</td>
-                </tr>
-            </tbody>
-        </table>
-        <p><strong>Total Consolidado del Proyecto: $45,200.00 MXN</strong></p>
+        <form action="#" method="GET">
+            <p>
+                <label for="proyecto">Seleccionar Proyecto a Generar:</label><br>
+                <select id="proyecto" name="proyecto">
+                    <option value="1">Edificio Corporativo A</option>
+                    <option value="2">Laboratorio de Redes</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="formato">Formato de Salida:</label><br>
+                <input type="radio" id="pdf" name="formato" value="pdf" checked>
+                <label for="pdf">Documento PDF (.pdf)</label>
+            </p>
+
+            <p>
+                <button type="submit">&#128196; Generar y Descargar Cotización por Cuarto (PDF)</button>
+            </p>
+        </form>
     </section>
 
+    <hr>
+
     <section>
+        <h3>Documento Pregenerado Disponible</h3>
         <ul>
-            <li>&#128196; <a href="../../public/uploads/orden_compra_001.pdf" target="_blank">Descargar Cotización por Cuarto Oficial (PDF) <small>(TCPDF Local)</small></a></li>
+            <li>&#128196; <a href="../../public/img/cotizacion-por-cuarto.pdf" target="_blank">Descargar Cotización Financiera por Zona (PDF)</a></li>
         </ul>
     </section>
 </main>
 
 <hr>
+
 <footer>
     <p><a href="3_gte-dashboard.html">&larr; Volver al Panel Principal</a></p>
     <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>

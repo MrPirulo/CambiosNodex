@@ -2,56 +2,62 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Invalidar Presupuesto - Nodex (Gerente)</title>
+    <title>Cancelar Presupuesto - Nodex</title>
     <link rel="stylesheet" href="css-gteproyectos/gte-dashboard.css">
 </head>
 <body>
 
 <header>
     <h1>Nodex - Plataforma Logística</h1>
-    <p>Invalidación de Presupuesto (Gerente de Proyectos)</p>
+    <p>Cancelar Cierre de Presupuesto (Gerente de Proyectos)</p>
     <nav>
-        <a href="../3_gte-dashboard.html"         >Panel principal      </a> |
-        <a href="3.6_gte-consultarCierre.html"    >Transacciones        </a> |
-        <a href="3.8_gte-eliminarPresupuesto.html">Invalidar Presupuesto</a> |
-        <a href="../../../auth/1.1_login.html"    >Cerrar sesión        </a>
+        <a href="../3_gte-dashboard.html">Panel principal</a> |
+        <a href="../RegistroArea/3.1_gte-registrarArea.html">Registrar Área</a> |
+        <a href="../RegistroArea/3.2_gte-catalago.html">Catálogo Áreas</a> |
+        <a href="../RegistroArea/3.3_gte-ActualizarCroquis.html">Actualizar Área</a> |
+        <a href="../RegistroArea/3.4_gte-eliminar.html">Eliminar Área</a> |
+        <a href="3.5_gte-registrarCierre.html">Registrar Cierre</a> |
+        <a href="3.6_gte-consultarCierre.html">Consultar Cierres</a> |
+        <a href="3.7_gte-ActualizarPresupuesto.html">Actualizar Cierre</a> |
+        <a href="3.8_gte-eliminarPresupuesto.html">Cancelar Cierre</a> |
+        <a href="../3.9_gte-kpi_promedioNodos.html">KPI Nodos</a> |
+        <a href="../3.10_gte-grafica.html">Gráfica Costos</a> |
+        <a href="../3.11_gte-formatoPDF.html">Exportar PDF</a> |
+        <a href="../../../index.html">Cerrar sesión</a>
     </nav>
 </header>
 
 <hr>
 
 <main>
-    <h2>Cancelar o Invalidar (Baja Lógica) Presupuesto Cerrado <small>(RF-3.8)</small></h2>
-    <p style="color: red; font-weight: bold;">¿Está seguro que desea invalidar el cierre de presupuesto?</p>
-    
-    <section>
-        <ul>
-            <li><strong>ID Cierre:</strong> CIER-102</li>
-            <li><strong>Área Arquitectónica:</strong> Centro de Datos A1</li>
-            <li><strong>Costo Consolidado Actual:</strong> $57,200.00 MXN</li>
-            <li><strong>Estado Actual:</strong> Congelado / Cerrado</li>
-        </ul>
-    </section>
+    <h2>Cancelar / Invalidar Cierre de Presupuesto <small>(RF-3.8)</small></h2>
 
     <form action="#" method="POST">
         <p>
-            <label for="motivo">Motivo detallado de la invalidación (Requerido para bitácora):</label><br>
-            <textarea id="motivo" name="motivo" rows="3" cols="50" required placeholder="Ej. Cambio radical en planos arquitectónicos y reubicación de nodos de red."></textarea>
+            <label for="folio_cierre">Seleccionar Folio a Invalidar:</label><br>
+            <select id="folio_cierre" name="folio_cierre" required>
+                <option value="">-- Seleccionar Folio --</option>
+                <option value="CRS-2026-01">CRS-2026-01 - Oficina Principal A-12 ($30,800.00)</option>
+                <option value="CRS-2026-02">CRS-2026-02 - Laboratorio CISCO 1 ($45,200.00)</option>
+            </select>
         </p>
+
         <p>
-            <label for="autoriza">Gerente Autorizador:</label><br>
-            <input type="text" id="autoriza" name="autoriza" value="Ricardo Avalos Vargas" readonly style="background-color: #e9ecef;">
+            <label for="justificacion">Justificación de Baja Lógica:</label><br>
+            <textarea id="justificacion" name="justificacion" rows="3" cols="40" placeholder="Explique por qué se invalida el presupuesto..." required></textarea>
         </p>
+
         <p>
-            <button type="submit" style="background-color: #ffcccc; color: red; font-weight: bold;">Confirmar Invalidez (Baja Lógica)</button>
-            <a href="3.6_gte-consultarCierre.html"><button type="button">Regresar a Consultas</button></a>
+            <button type="submit" onclick="return confirm('¿Está seguro de invalidar este cierre de presupuesto?');">Invalidar Presupuesto</button>
+            <a href="3.6_gte-consultarCierre.html">Cancelar</a>
         </p>
     </form>
 </main>
 
 <hr>
+
 <footer>
-    <p><a href="3.6_gte-consultarCierre.html">&larr; Volver a Consultas</a></p>
+    <p><a href="3_gte-dashboard.html">&larr; Volver al Panel Principal</a></p>
     <p>Prototipo Nodex &mdash; AEB-1055 Programación Web</p>
 </footer>
 
